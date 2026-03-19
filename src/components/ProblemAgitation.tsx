@@ -6,6 +6,7 @@ import { PillBadge } from "./ui/PillBadge";
 import { ClockIcon } from "@/components/animate-ui/icons/clock";
 import { ChartBarDecreasingIcon } from "@/components/animate-ui/icons/chart-bar-decreasing";
 import { MessageCircleIcon } from "@/components/animate-ui/icons/message-circle";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const painPoints = [
   {
@@ -72,21 +73,23 @@ const ProblemAgitation = () => {
         >
           {painPoints.map((point, index) => (
             <motion.div key={index} variants={fadeUpVariant}>
-              <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 overflow-hidden">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
-                    <point.icon className="w-5 h-5 text-foreground" animateOnHover />
-                  </div>
-                  <CardTitle className="text-xl font-medium text-foreground leading-tight">
-                    {point.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {point.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <AnimateIcon animateOnHover className="h-full">
+                <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 overflow-hidden">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
+                      <point.icon className="w-5 h-5 text-foreground" />
+                    </div>
+                    <CardTitle className="text-xl font-medium text-foreground leading-tight">
+                      {point.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {point.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimateIcon>
             </motion.div>
           ))}
         </motion.div>

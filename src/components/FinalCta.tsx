@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CircleCheckIcon } from "@/components/animate-ui/icons/circle-check";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -30,11 +31,15 @@ const FinalCta = () => {
           
           <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-foreground font-medium">
-              <CircleCheckIcon className="text-muted-foreground w-4 h-4" animateOnHover />
+              <AnimateIcon animateOnHover>
+                <CircleCheckIcon className="text-muted-foreground w-4 h-4" />
+              </AnimateIcon>
               100% Transparent Pricing
             </div>
             <div className="flex items-center gap-2 text-foreground font-medium">
-              <CircleCheckIcon className="text-muted-foreground w-4 h-4" animateOnHover />
+              <AnimateIcon animateOnHover>
+                <CircleCheckIcon className="text-muted-foreground w-4 h-4" />
+              </AnimateIcon>
               Guaranteed Timelines
             </div>
           </motion.div>

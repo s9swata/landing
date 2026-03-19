@@ -5,6 +5,7 @@ import { SearchIcon } from "@/components/animate-ui/icons/search";
 import { RouteIcon } from "@/components/animate-ui/icons/route";
 import { BinaryIcon } from "@/components/animate-ui/icons/binary";
 import { AxeIcon } from "@/components/animate-ui/icons/axe";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const steps = [
   {
@@ -72,10 +73,10 @@ const HowItWorks = () => {
                 <div className="hidden lg:block absolute top-6 left-[calc(50%+24px)] w-[calc(100%-48px)] h-[1px] bg-gradient-to-r from-border to-transparent -z-10" />
               )}
               
-              <div className="flex flex-col items-center text-center">
-<div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-border mb-6">
-                    <step.icon className="w-5 h-5 text-foreground" animateOnHover />
-                  </div>
+              <AnimateIcon animateOnHover className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-border mb-6">
+                  <step.icon className="w-5 h-5 text-foreground" />
+                </div>
                 <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                   {step.phase}
                 </div>
@@ -85,7 +86,7 @@ const HowItWorks = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
-              </div>
+              </AnimateIcon>
             </motion.div>
           ))}
         </motion.div>

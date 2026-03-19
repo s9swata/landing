@@ -6,6 +6,7 @@ import { PillBadge } from "./ui/PillBadge";
 import { AxeIcon } from "@/components/animate-ui/icons/axe";
 import { CompassIcon } from "@/components/animate-ui/icons/compass";
 import { CherryIcon } from "@/components/animate-ui/icons/cherry";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const features = [
   {
@@ -70,19 +71,23 @@ const SolutionShowcase = () => {
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={fadeUpVariant}>
-              <Card className="h-full bg-gradient-to-b from-surface to-transparent border-neutral-700">
-                <CardHeader>
-                  <feature.icon className="w-6 h-6 text-foreground mb-3" animateOnHover />
-                  <CardTitle className="text-xl font-medium text-foreground">
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <AnimateIcon animateOnHover className="h-full">
+                <Card className="h-full bg-gradient-to-b from-surface to-transparent border-neutral-700">
+                  <CardHeader>
+                    <div className="mb-3">
+                      <feature.icon className="w-6 h-6 text-foreground" />
+                    </div>
+                    <CardTitle className="text-xl font-medium text-foreground">
+                      {feature.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimateIcon>
             </motion.div>
           ))}
         </motion.div>

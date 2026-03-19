@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SendIcon } from "@/components/animate-ui/icons/send";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -76,7 +77,9 @@ const Contact = () => {
 
             <Button className="w-full bg-pearl text-pearl-foreground hover:bg-pearl/90 font-semibold h-12 rounded-xl group">
               Send Message
-              <SendIcon className="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" animateOnHover />
+              <AnimateIcon animateOnHover className="ml-2 group-hover:translate-x-1 transition-transform">
+                <SendIcon className="w-3.5 h-3.5" />
+              </AnimateIcon>
             </Button>
 
             <p className="text-center text-sm text-muted-foreground pt-4 ">

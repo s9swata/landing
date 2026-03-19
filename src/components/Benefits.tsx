@@ -7,6 +7,7 @@ import { Timer } from "@/components/animate-ui/icons/timer";
 import { CopyIcon } from "@/components/animate-ui/icons/copy";
 import { BlendIcon } from "@/components/animate-ui/icons/blend";
 import { SlidersHorizontal } from "@/components/animate-ui/icons/sliders-horizontal";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const benefits = [
   {
@@ -69,24 +70,26 @@ const Benefits = () => {
         >
           {benefits.map((benefit, index) => (
             <motion.div key={index} variants={fadeUpVariant} className="h-full">
-              <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 hover:bg-primary/5 transition-colors group">
-                <CardHeader className="relative">
-                  <div className="absolute top-6 right-6 text-4xl font-bold text-foreground/10 group-hover:text-foreground/20 transition-colors pointer-events-none">
-                    {benefit.number}
-                  </div>
-                  <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
-                    <benefit.Icon className="w-5 h-5 text-foreground" animateOnHover />
-                  </div>
-                  <CardTitle className="text-xl font-medium text-foreground">
-                    {benefit.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <AnimateIcon animateOnHover className="h-full">
+                <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 hover:bg-primary/5 transition-colors">
+                  <CardHeader className="relative">
+                    <div className="absolute top-6 right-6 text-4xl font-bold text-foreground/10 transition-colors pointer-events-none">
+                      {benefit.number}
+                    </div>
+                    <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
+                      <benefit.Icon className="w-5 h-5 text-foreground" />
+                    </div>
+                    <CardTitle className="text-xl font-medium text-foreground">
+                      {benefit.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimateIcon>
             </motion.div>
           ))}
         </motion.div>

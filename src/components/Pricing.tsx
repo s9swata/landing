@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { CheckIcon } from "@/components/animate-ui/icons/check";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const pricingTiers = [
   {
@@ -77,36 +78,38 @@ const Pricing = () => {
         >
           {pricingTiers.map((tier, index) => (
             <motion.div key={index} variants={fadeUpVariant} className="h-full">
-              <Card className={`h-full flex flex-col relative ${tier.popular ? "bg-primary/5 border-primary/30" : "bg-surface/50 backdrop-blur-md border-border"}`}>
-                {tier.popular && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-primary text-background text-xs font-bold rounded-full uppercase tracking-wider">
-                    Most Popular
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-2xl font-semibold text-foreground mb-2">{tier.name}</CardTitle>
-                  <p className="text-sm text-muted-foreground min-h-[40px] leading-relaxed select-none">{tier.audience}</p>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  <ul className="space-y-4">
-                    {tier.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckIcon className="w-4 h-4 text-foreground flex-shrink-0 mt-0.5" animateOnHover />
-                        <span className="text-sm text-muted-foreground leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <a
-                    href="https://cal.com/saswata-biswas-dfnuvi/client-call"
-                    target="_blank"
-                    rel="noreferrer" className="w-full py-3 rounded-xl text-sm font-medium text-center transition-all bg-pearl text-pearl-foreground hover:bg-pearl/90"
-                  >
-                    {tier.cta}
-                  </a>
-                </CardFooter>
-              </Card>
+              <AnimateIcon animateOnHover className="h-full">
+                <Card className={`h-full flex flex-col relative ${tier.popular ? "bg-primary/5 border-primary/30" : "bg-surface/50 backdrop-blur-md border-border"}`}>
+                  {tier.popular && (
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-primary text-background text-xs font-bold rounded-full uppercase tracking-wider">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-semibold text-foreground mb-2">{tier.name}</CardTitle>
+                    <p className="text-sm text-muted-foreground min-h-[40px] leading-relaxed select-none">{tier.audience}</p>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <ul className="space-y-4">
+                      {tier.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <CheckIcon className="w-4 h-4 text-foreground flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-muted-foreground leading-relaxed">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <a
+                      href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+                      target="_blank"
+                      rel="noreferrer" className="w-full py-3 rounded-xl text-sm font-medium text-center transition-all bg-pearl text-pearl-foreground hover:bg-pearl/90"
+                    >
+                      {tier.cta}
+                    </a>
+                  </CardFooter>
+                </Card>
+              </AnimateIcon>
             </motion.div>
           ))}
         </motion.div>

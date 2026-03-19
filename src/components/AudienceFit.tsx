@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CircleCheckIcon } from "@/components/animate-ui/icons/circle-check";
 import { AirplayIcon } from "@/components/animate-ui/icons/airplay";
 import { LayoutDashboardIcon } from "@/components/animate-ui/icons/layout-dashboard";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const saasUseCases = [
   { title: "MVPs & Product Launches", desc: "Get your idea into users' hands fast. Clean code, scalable architecture, no compromise." },
@@ -70,15 +71,17 @@ const AudienceFit = () => {
             <div className="space-y-4">
               {saasUseCases.map((useCase, idx) => (
                 <motion.div key={idx} variants={fadeUpVariant}>
-                  <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
-                    <CardContent className="p-6">
-                      <h4 className="text-foreground font-medium mb-2 flex items-center gap-2">
-                        <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" animateOnHover />
-                        {useCase.title}
-                      </h4>
-                      <p className="text-muted-foreground text-sm pl-7 leading-relaxed">{useCase.desc}</p>
-                    </CardContent>
-                  </Card>
+                  <AnimateIcon animateOnHover className="block">
+                    <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
+                      <CardContent className="p-6">
+                        <h4 className="text-foreground font-medium mb-2 flex items-center gap-2">
+                          <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" />
+                          {useCase.title}
+                        </h4>
+                        <p className="text-muted-foreground text-sm pl-7 leading-relaxed">{useCase.desc}</p>
+                      </CardContent>
+                    </Card>
+                  </AnimateIcon>
                 </motion.div>
               ))}
             </div>
@@ -110,15 +113,17 @@ const AudienceFit = () => {
             <div className="space-y-4">
               {commerceVerticals.map((vertical, idx) => (
                 <motion.div key={idx} variants={fadeUpVariant}>
-                  <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
-                    <CardContent className="p-5">
-                      <h4 className="text-foreground font-medium mb-1 flex items-center gap-2">
-                        <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" animateOnHover />
-                        {vertical.title}
-                      </h4>
-                      <p className="text-muted-foreground text-sm pl-7 leading-relaxed">{vertical.desc}</p>
-                    </CardContent>
-                  </Card>
+                  <AnimateIcon animateOnHover className="block">
+                    <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
+                      <CardContent className="p-5">
+                        <h4 className="text-foreground font-medium mb-1 flex items-center gap-2">
+                          <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" />
+                          {vertical.title}
+                        </h4>
+                        <p className="text-muted-foreground text-sm pl-7 leading-relaxed">{vertical.desc}</p>
+                      </CardContent>
+                    </Card>
+                  </AnimateIcon>
                 </motion.div>
               ))}
             </div>

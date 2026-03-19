@@ -9,6 +9,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
 import Contact from "@/components/Contact";
+import TeamShowcase from "@/components/TeamShowcase";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Faq />
       <FinalCta />
       <Contact />
+      <TeamShowcase />
       <Footer />
     </main>
   );
