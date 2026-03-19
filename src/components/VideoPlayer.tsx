@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, memo } from "react";
 import Hls from "hls.js";
 
@@ -26,8 +28,7 @@ const VideoPlayer = memo(() => {
       autoPlay
       loop
       muted
-      playsInline
-      className="w-full h-full object-cover"
+      playsInline className="w-full h-full object-cover"
     />
   );
 });

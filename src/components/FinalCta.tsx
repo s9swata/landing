@@ -1,0 +1,60 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { CheckCircle } from "@phosphor-icons/react";
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+};
+
+const FinalCta = () => {
+  return (
+    <section className="relative py-32 px-6 bg-background overflow-hidden ">
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-primary/5 opacity-50" />
+      
+      <div className="max-w-4xl mx-auto relative z-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center p-8 md:p-16 rounded-3xl bg-surface/50 backdrop-blur-md border border-border shadow-2xl backdrop-blur-xl"
+        >
+          <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-6">
+            Ready to Build Your <span className="bg-gradient-to-r from-primary to-muted-foreground bg-clip-text text-transparent">Revenue Machine?</span>
+          </motion.h2>
+          
+          <motion.p variants={fadeUpVariant} className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+            Transform your stagnant growth and buggy code into a scalable, automated digital product that users love.
+          </motion.p>
+          
+          <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+            <div className="flex items-center gap-2 text-foreground font-medium">
+              <CheckCircle weight="fill" className="text-muted-foreground w-5 h-5" />
+              100% Transparent Pricing
+            </div>
+            <div className="flex items-center gap-2 text-foreground font-medium">
+              <CheckCircle weight="fill" className="text-muted-foreground w-5 h-5" />
+              Guaranteed Timelines
+            </div>
+          </motion.div>
+          
+          <motion.div variants={fadeUpVariant} className="flex flex-col items-center">
+            <a
+              href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+              target="_blank"
+              rel="noreferrer" className="px-8 py-4 rounded-full text-base font-semibold bg-primary text-background hover:opacity-90 transition-all shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] hover:-translate-y-1 block w-full sm:w-auto"
+            >
+              Book Your Free Demo
+            </a>
+            <p className="mt-4 text-sm text-muted-foreground max-w-sm">
+              We respond within 24 hours. No long sales process, just a conversation about your goals.
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default FinalCta;
