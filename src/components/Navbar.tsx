@@ -25,7 +25,7 @@ const Navbar = () => (
       <a 
         href="https://cal.com/saswata-biswas-dfnuvi/client-call" 
         target="_blank" 
-        rel="noreferrer" className="px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-b from-primary to-muted-foreground text-background transition-opacity hover:opacity-90"
+        rel="noreferrer" className="px-5 py-2 rounded-full text-sm font-medium bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all"
       >
         Book a Call
       </a>

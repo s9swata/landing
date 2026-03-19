@@ -1,32 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MagnifyingGlass, Path, Code, Rocket } from "@phosphor-icons/react";
+import { SearchIcon } from "@/components/animate-ui/icons/search";
+import { RouteIcon } from "@/components/animate-ui/icons/route";
+import { BinaryIcon } from "@/components/animate-ui/icons/binary";
+import { AxeIcon } from "@/components/animate-ui/icons/axe";
 
 const steps = [
   {
     phase: "Phase 01",
     title: "Deep Dive & Strategy",
     description: "We map your funnel, understand your users, and align on the architecture that serves your business.",
-    icon: MagnifyingGlass,
+    icon: SearchIcon,
   },
   {
     phase: "Phase 02",
     title: "Tailored Plan",
     description: "We show you the roadmap before we write code. You see exactly what's building, and you get checkpoints to pivot if needed.",
-    icon: Path,
+    icon: RouteIcon,
   },
   {
     phase: "Phase 03",
     title: "Build & Setup",
     description: "Full-stack development using modern, scalable tech. We handle hosting, domains, payment setup, and all production details.",
-    icon: Code,
+    icon: BinaryIcon,
   },
   {
     phase: "Phase 04",
     title: "Launch & Improve",
     description: "Deploy with confidence. We train your team, monitor early metrics, and optimize for conversions in the first 30 days.",
-    icon: Rocket,
+    icon: AxeIcon,
   },
 ];
 
@@ -70,9 +73,9 @@ const HowItWorks = () => {
               )}
               
               <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-border mb-6">
-                  <step.icon weight="duotone" className="w-6 h-6 text-foreground" />
-                </div>
+<div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-border mb-6">
+                    <step.icon className="w-5 h-5 text-foreground" animateOnHover />
+                  </div>
                 <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                   {step.phase}
                 </div>

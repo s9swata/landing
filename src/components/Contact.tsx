@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PaperPlaneRight } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SendIcon } from "@/components/animate-ui/icons/send";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -74,9 +74,9 @@ const Contact = () => {
               />
             </div>
 
-            <Button className="w-full bg-primary text-background hover:bg-primary/90 font-semibold h-12 rounded-xl group">
+            <Button className="w-full bg-pearl text-pearl-foreground hover:bg-pearl/90 font-semibold h-12 rounded-xl group">
               Send Message
-              <PaperPlaneRight weight="bold" className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <SendIcon className="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" animateOnHover />
             </Button>
 
             <p className="text-center text-sm text-muted-foreground pt-4 ">

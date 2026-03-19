@@ -1,27 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClockCountdown, TrendDown, ChatsCircle } from "@phosphor-icons/react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PillBadge } from "./ui/PillBadge";
+import { ClockIcon } from "@/components/animate-ui/icons/clock";
+import { ChartBarDecreasingIcon } from "@/components/animate-ui/icons/chart-bar-decreasing";
+import { MessageCircleIcon } from "@/components/animate-ui/icons/message-circle";
 
 const painPoints = [
   {
     title: "Slow Execution, Missed Deadlines",
     description:
       "You've been waiting months for a developer to ship something that should have taken weeks. Opportunities don't wait.",
-    icon: ClockCountdown,
+    icon: ClockIcon,
   },
   {
     title: "Visitors Don't Convert to Buyers",
     description:
       "Your traffic is real but the sales aren't. Whether it's a SaaS landing page or your online store, leaky funnels cost you every day.",
-    icon: TrendDown,
+    icon: ChartBarDecreasingIcon,
   },
   {
     title: "Orders Lost in DMs and Inboxes",
     description:
       "You're managing sales through WhatsApp and Instagram. It works — until it doesn't. One missed message is a lost sale.",
-    icon: ChatsCircle,
+    icon: MessageCircleIcon,
   },
 ];
 
@@ -43,11 +46,9 @@ const ProblemAgitation = () => {
             visible: { transition: { staggerChildren: 0.2 } },
           }} className="flex flex-col items-center text-center mb-16"
         >
-          <motion.span
-            variants={fadeUpVariant} className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4"
-          >
-            The Challenge
-          </motion.span>
+          <motion.div variants={fadeUpVariant} className="mb-4">
+            <PillBadge icon="⚡">The Challenge</PillBadge>
+          </motion.div>
           <motion.h2
             variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6"
           >
@@ -71,10 +72,10 @@ const ProblemAgitation = () => {
         >
           {painPoints.map((point, index) => (
             <motion.div key={index} variants={fadeUpVariant}>
-              <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 backdrop-blur-md overflow-hidden">
+              <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 overflow-hidden">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
-                    <point.icon weight="duotone" className="w-6 h-6 text-foreground" />
+                    <point.icon className="w-5 h-5 text-foreground" animateOnHover />
                   </div>
                   <CardTitle className="text-xl font-medium text-foreground leading-tight">
                     {point.title}

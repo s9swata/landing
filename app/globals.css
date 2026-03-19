@@ -17,6 +17,10 @@
     --border:            0 0% 100% / .1;
     --ring:              0 0% 100%;
 
+    /* Pearl (CTA) */
+    --pearl:             35 20% 88%;
+    --pearl-foreground:  0 0% 0%;
+
     /* Card / Popover */
     --card:              0 0% 0%;
     --card-foreground:   0 0% 100%;

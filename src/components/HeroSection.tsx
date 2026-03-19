@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import VideoPlayer from "./VideoPlayer";
+import { PillBadge } from "./ui/PillBadge";
 
 const badges = [
-  "SaaS Products & Ecommerce Stores"
+  { icon: "🚀", text: "SaaS Products & Ecommerce Stores" }
 ];
 
 const logoNames = ["Vercel", "Stripe", "Linear", "Notion", "Raycast", "Arc"];
@@ -17,6 +18,19 @@ const fadeUp = (delay: number) => ({
 
 const HeroSection = () => (
   <section className="relative min-h-screen bg-background overflow-hidden">
+    {/* Dotted Mesh Background */}
+    <div 
+      className="absolute inset-0 z-0 opacity-40"
+      style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(0 0% 100% / .15) 1px, transparent 0)`,
+        backgroundSize: '40px 40px'
+      }}
+    />
+
+    {/* Gradient Orbs */}
+    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-white/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/4 z-0" />
+    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-[100px] translate-x-1/4 -translate-y-1/4 z-0" />
+
     {/* Video */}
     <div className="absolute bottom-[25vh] left-0 right-0 h-[80vh] z-0">
       <VideoPlayer />
@@ -27,16 +41,14 @@ const HeroSection = () => (
       {/* Badges */}
       <motion.div className="flex flex-wrap justify-center gap-3 mb-8" {...fadeUp(0.1)}>
         {badges.map((badge) => (
-          <span
-            key={badge} className="px-4 py-1.5 rounded-full text-xs text-muted-foreground backdrop-blur-md bg-surface/50 backdrop-blur-md border border-border"
-          >
-            {badge}
-          </span>
+          <PillBadge key={badge.text} icon={badge.icon}>
+            {badge.text}
+          </PillBadge>
         ))}
       </motion.div>
 
       {/* Headline */}
-      <motion.h1 className="text-5xl md:text-7xl lg:text-[80px] font-semibold tracking-tight text-foreground text-center leading-[1.05] max-w-4xl"
+      <motion.h1 className="text-5xl md:text-6xl lg:text-[80px] font-semibold tracking-tighter text-foreground text-center leading-[1.05] max-w-4xl"
         {...fadeUp(0.25)}
       >
         Stop Waiting. Start <span className="bg-gradient-to-r from-primary to-muted-foreground bg-clip-text text-transparent">Shipping</span> What Sells.
@@ -54,7 +66,7 @@ const HeroSection = () => (
         <a 
           href="https://cal.com/saswata-biswas-dfnuvi/client-call"
           target="_blank"
-          rel="noreferrer" className="px-7 py-3 rounded-full text-sm font-medium bg-primary text-background hover:opacity-90 transition-opacity"
+          rel="noreferrer" className="px-7 py-3.5 rounded-full text-sm font-medium bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all"
         >
           Book a Free Call
         </a>

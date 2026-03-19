@@ -1,42 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "@phosphor-icons/react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { CheckIcon } from "@/components/animate-ui/icons/check";
 
 const pricingTiers = [
   {
-    name: "SaaS Launch",
-    audience: "Founders ready to validate and launch",
+    name: "SaaS",
+    audience: "Founders ready to validate, launch, or scale",
     features: [
       "High-converting landing page",
-      "Mobile-responsive design",
-      "Contact + lead capture form",
-      "2 revision rounds",
-    ],
-    cta: "Get Started",
-    popular: false,
-  },
-  {
-    name: "SaaS Growth",
-    audience: "Scaling SaaS with proven product-market fit",
-    features: [
-      "Full SaaS product + landing page",
+      "Full SaaS product development",
       "AI feature integration",
       "Production-ready codebase",
-      "30 days of post-launch support",
     ],
-    cta: "Book Discovery Call",
+    cta: "Get Started",
     popular: true,
   },
   {
-    name: "Commerce Launch",
+    name: "eCommerce",
     audience: "Local businesses ready to go online",
     features: [
       "Done-for-you ecommerce store",
       "Mobile-optimized checkout",
       "Payment processor setup",
-      "Initial admin training",
+      "Admin training included",
     ],
     cta: "Start Your Store",
     popular: false,
@@ -85,7 +73,7 @@ const Pricing = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }} className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {pricingTiers.map((tier, index) => (
             <motion.div key={index} variants={fadeUpVariant} className="h-full">
@@ -103,7 +91,7 @@ const Pricing = () => {
                   <ul className="space-y-4">
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <Check weight="bold" className="w-5 h-5 text-foreground flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-4 h-4 text-foreground flex-shrink-0 mt-0.5" animateOnHover />
                         <span className="text-sm text-muted-foreground leading-relaxed">{feature}</span>
                       </li>
                     ))}
@@ -113,11 +101,7 @@ const Pricing = () => {
                   <a
                     href="https://cal.com/saswata-biswas-dfnuvi/client-call"
                     target="_blank"
-                    rel="noreferrer" className={`w-full py-3 rounded-xl text-sm font-medium text-center transition-all ${
-                      tier.popular
-                        ? "bg-primary text-background hover:opacity-90"
-                        : "bg-background text-foreground border border-border hover:bg-primary/10"
-                    }`}
+                    rel="noreferrer" className="w-full py-3 rounded-xl text-sm font-medium text-center transition-all bg-pearl text-pearl-foreground hover:bg-pearl/90"
                   >
                     {tier.cta}
                   </a>

@@ -1,33 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Timer, CursorClick, CreditCard, SlidersHorizontal } from "@phosphor-icons/react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PillBadge } from "./ui/PillBadge";
+import { Timer } from "@/components/animate-ui/icons/timer";
+import { CopyIcon } from "@/components/animate-ui/icons/copy";
+import { BlendIcon } from "@/components/animate-ui/icons/blend";
+import { SlidersHorizontal } from "@/components/animate-ui/icons/sliders-horizontal";
 
 const benefits = [
   {
     number: "01",
     title: "Launch Faster",
     description: "We've refined our process to eliminate wasted time. Most projects go live in 2–4 weeks — not months.",
-    icon: Timer,
+    Icon: Timer,
   },
   {
     number: "02",
     title: "Convert Better",
     description: "Design decisions backed by conversion principles. Every CTA, headline, and layout element earns its place.",
-    icon: CursorClick,
+    Icon: CopyIcon,
   },
   {
     number: "03",
     title: "Sell Smoothly",
     description: "Mobile-first checkouts, trust signals, and seamless payment flows that turn browsers into buyers.",
-    icon: CreditCard,
+    Icon: BlendIcon,
   },
   {
     number: "04",
     title: "Manage Easily",
     description: "Simple admin panels, clear order dashboards, and training so you're never dependent on a developer again.",
-    icon: SlidersHorizontal,
+    Icon: SlidersHorizontal,
   },
 ];
 
@@ -46,9 +50,9 @@ const Benefits = () => {
           viewport={{ once: true, margin: "-100px" }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center mb-16"
         >
-          <motion.span variants={fadeUpVariant} className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">
-            Why Nuturn
-          </motion.span>
+          <motion.div variants={fadeUpVariant} className="mb-4">
+            <PillBadge icon="✨">Why Nuturn</PillBadge>
+          </motion.div>
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
             Built to Move the Needle
           </motion.h2>
@@ -71,7 +75,7 @@ const Benefits = () => {
                     {benefit.number}
                   </div>
                   <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
-                    <benefit.icon weight="duotone" className="w-6 h-6 text-foreground" />
+                    <benefit.Icon className="w-5 h-5 text-foreground" animateOnHover />
                   </div>
                   <CardTitle className="text-xl font-medium text-foreground">
                     {benefit.title}

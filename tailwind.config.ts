@@ -20,20 +20,24 @@ export default {
   				'sans-serif'
   			]
   		},
-  		colors: {
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
+colors: {
+			border: 'hsl(var(--border))',
+			input: 'hsl(var(--input))',
+			ring: 'hsl(var(--ring))',
+			background: 'hsl(var(--background))',
+			foreground: 'hsl(var(--foreground))',
+			primary: {
+				DEFAULT: 'hsl(var(--primary))',
+				foreground: 'hsl(var(--primary-foreground))'
+			},
+			pearl: {
+				DEFAULT: 'hsl(var(--pearl))',
+				foreground: 'hsl(var(--pearl-foreground))'
+			},
+			secondary: {
+				DEFAULT: 'hsl(var(--secondary))',
+				foreground: 'hsl(var(--secondary-foreground))'
+			},
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'

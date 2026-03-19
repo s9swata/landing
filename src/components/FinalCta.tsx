@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle } from "@phosphor-icons/react";
+import { CircleCheckIcon } from "@/components/animate-ui/icons/circle-check";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
@@ -18,7 +18,7 @@ const FinalCta = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center p-8 md:p-16 rounded-3xl bg-surface/50 backdrop-blur-md border border-border shadow-2xl backdrop-blur-xl"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center p-8 md:p-16 rounded-3xl bg-surface/50 backdrop-blur-md border border-neutral-700 shadow-2xl"
         >
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-6">
             Ready to Build Your <span className="bg-gradient-to-r from-primary to-muted-foreground bg-clip-text text-transparent">Revenue Machine?</span>
@@ -30,11 +30,11 @@ const FinalCta = () => {
           
           <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-foreground font-medium">
-              <CheckCircle weight="fill" className="text-muted-foreground w-5 h-5" />
+              <CircleCheckIcon className="text-muted-foreground w-4 h-4" animateOnHover />
               100% Transparent Pricing
             </div>
             <div className="flex items-center gap-2 text-foreground font-medium">
-              <CheckCircle weight="fill" className="text-muted-foreground w-5 h-5" />
+              <CircleCheckIcon className="text-muted-foreground w-4 h-4" animateOnHover />
               Guaranteed Timelines
             </div>
           </motion.div>
@@ -43,7 +43,7 @@ const FinalCta = () => {
             <a
               href="https://cal.com/saswata-biswas-dfnuvi/client-call"
               target="_blank"
-              rel="noreferrer" className="px-8 py-4 rounded-full text-base font-semibold bg-primary text-background hover:opacity-90 transition-all shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] hover:-translate-y-1 block w-full sm:w-auto"
+              rel="noreferrer" className="px-8 py-4 rounded-full text-base font-semibold bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all block w-full sm:w-auto"
             >
               Book Your Free Demo
             </a>

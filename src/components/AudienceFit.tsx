@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle, Desktop, Storefront } from "@phosphor-icons/react";
 import { Card, CardContent } from "@/components/ui/card";
+import { CircleCheckIcon } from "@/components/animate-ui/icons/circle-check";
+import { AirplayIcon } from "@/components/animate-ui/icons/airplay";
+import { LayoutDashboardIcon } from "@/components/animate-ui/icons/layout-dashboard";
 
 const saasUseCases = [
   { title: "MVPs & Product Launches", desc: "Get your idea into users' hands fast. Clean code, scalable architecture, no compromise." },
@@ -41,27 +43,37 @@ const AudienceFit = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Saas founders */}
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_200px_1fr] gap-8 lg:gap-12">
+          {/* SaaS Category */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="lg:sticky lg:top-32 lg:self-start"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-surface/50 backdrop-blur-md flex items-center justify-center border border-neutral-700">
+                <AirplayIcon className="w-5 h-5 text-foreground" animateOnHover />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground">SaaS Founders</h3>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">Build MVPs, landing pages & AI-integrated products</p>
+          </motion.div>
+
+          {/* Saas Cards */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-full bg-surface/50 backdrop-blur-md flex items-center justify-center border border-border">
-                <Desktop weight="duotone" className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="text-2xl font-semibold text-foreground">Track 1 — SaaS Founders</h3>
-            </div>
             <div className="space-y-4">
               {saasUseCases.map((useCase, idx) => (
                 <motion.div key={idx} variants={fadeUpVariant}>
-                  <Card className="bg-surface/50 backdrop-blur-md border-border">
+                  <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
                     <CardContent className="p-6">
                       <h4 className="text-foreground font-medium mb-2 flex items-center gap-2">
-                        <CheckCircle weight="fill" className="text-muted-foreground w-5 h-5 flex-shrink-0" />
+                        <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" animateOnHover />
                         {useCase.title}
                       </h4>
                       <p className="text-muted-foreground text-sm pl-7 leading-relaxed">{useCase.desc}</p>
@@ -72,26 +84,36 @@ const AudienceFit = () => {
             </div>
           </motion.div>
 
-          {/* Commerce */}
+          {/* Commerce Category */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="lg:sticky lg:top-32 lg:self-start"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-surface/50 backdrop-blur-md flex items-center justify-center border border-neutral-700">
+                <LayoutDashboardIcon className="w-5 h-5 text-foreground" animateOnHover />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground">Commerce</h3>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">Ecommerce stores that convert browsers to buyers</p>
+          </motion.div>
+
+          {/* Commerce Cards */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } } }}
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 rounded-full bg-surface/50 backdrop-blur-md flex items-center justify-center border border-border">
-                <Storefront weight="duotone" className="w-6 h-6 text-foreground" />
-              </div>
-              <h3 className="text-2xl font-semibold text-foreground">Track 2 — Commerce</h3>
-            </div>
             <div className="space-y-4">
               {commerceVerticals.map((vertical, idx) => (
                 <motion.div key={idx} variants={fadeUpVariant}>
-                  <Card className="bg-surface/50 backdrop-blur-md border-border">
+                  <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
                     <CardContent className="p-5">
                       <h4 className="text-foreground font-medium mb-1 flex items-center gap-2">
-                        <CheckCircle weight="fill" className="text-muted-foreground w-5 h-5 flex-shrink-0" />
+                        <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" animateOnHover />
                         {vertical.title}
                       </h4>
                       <p className="text-muted-foreground text-sm pl-7 leading-relaxed">{vertical.desc}</p>
