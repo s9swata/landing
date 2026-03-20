@@ -72,7 +72,7 @@ const AudienceFit = () => {
               {saasUseCases.map((useCase, idx) => (
                 <motion.div key={idx} variants={fadeUpVariant}>
                   <AnimateIcon animateOnHover className="block">
-                    <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
+                    <Card variant="glass" className="rounded-2xl">
                       <CardContent className="p-6">
                         <h4 className="text-foreground font-medium mb-2 flex items-center gap-2">
                           <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" />
@@ -114,7 +114,7 @@ const AudienceFit = () => {
               {commerceVerticals.map((vertical, idx) => (
                 <motion.div key={idx} variants={fadeUpVariant}>
                   <AnimateIcon animateOnHover className="block">
-                    <Card className="bg-surface/50 backdrop-blur-md border-neutral-700 rounded-2xl">
+                    <Card variant="glass" className="rounded-2xl">
                       <CardContent className="p-5">
                         <h4 className="text-foreground font-medium mb-1 flex items-center gap-2">
                           <CircleCheckIcon className="text-muted-foreground w-4 h-4 flex-shrink-0" />

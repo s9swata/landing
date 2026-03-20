@@ -72,7 +72,7 @@ const SolutionShowcase = () => {
           {features.map((feature, index) => (
             <motion.div key={index} variants={fadeUpVariant}>
               <AnimateIcon animateOnHover className="h-full">
-                <Card className="h-full bg-gradient-to-b from-surface to-transparent border-neutral-700">
+                <Card variant="glass" className="h-full">
                   <CardHeader>
                     <div className="mb-3">
                       <feature.icon className="w-6 h-6 text-foreground" />
