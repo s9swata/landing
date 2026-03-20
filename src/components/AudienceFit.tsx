@@ -8,17 +8,17 @@ import { LayoutDashboardIcon } from "@/components/animate-ui/icons/layout-dashbo
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const saasUseCases = [
-  { title: "MVPs & Product Launches", desc: "Get your idea into users' hands fast. Clean code, scalable architecture, no compromise." },
-  { title: "SaaS Landing Pages", desc: "High-converting pages that explain your product and make the CTA impossible to ignore." },
-  { title: "AI-Integrated Products", desc: "OpenAI, Anthropic, or custom APIs — we build AI features that feel magical, not gimmicky." },
+  { title: "Quick App Launches", desc: "Get your idea to users fast. Clean code, built to grow, no shortcuts." },
+  { title: "SaaS Landing Pages", desc: "Pages that explain your app and make people want to click and buy." },
+  { title: "AI Tools", desc: "OpenAI or custom APIs. We build AI that feels like magic, not a trick." },
 ];
 
 const commerceVerticals = [
-  { title: "Clothing & Fashion", desc: "Beautiful lookbooks, size guides, and one-click checkout." },
-  { title: "Beauty & Skincare", desc: "Product detail pages that build trust and drive repeat purchases." },
-  { title: "Home Decor & Gifts", desc: "Showcase your collections with editorial-quality presentation." },
-  { title: "Food, Snacks & Sweets", desc: "Mouth-watering product photos, smooth ordering, delivery integration." },
-  { title: "Jewellery & Premium", desc: "Premium storefronts worthy of your products' price point." },
+  { title: "Clothes & Fashion", desc: "Nice photos, size guides, and fast checkout." },
+  { title: "Beauty & Skin Care", desc: "Pages that build trust and make people buy again." },
+  { title: "Home & Gifts", desc: "Show off your items in the best light." },
+  { title: "Food & Snacks", desc: "Great food photos, easy ordering, and fast delivery setup." },
+  { title: "Jewelry & Fancy Items", desc: "High-end stores that match your premium items." },
 ];
 
 const fadeUpVariant = {
@@ -40,7 +40,7 @@ const AudienceFit = () => {
             Perfect Fit
           </motion.span>
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-6">
-            Two Tracks. <span className="text-muted-foreground">Built for You.</span>
+            Two Paths. <span className="text-muted-foreground">Built for You.</span>
           </motion.h2>
         </motion.div>
 
@@ -58,7 +58,7 @@ const AudienceFit = () => {
               </div>
               <h3 className="text-lg font-semibold text-foreground">SaaS Founders</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">Build MVPs, landing pages & AI-integrated products</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">Build new apps, landing pages, and AI tools.</p>
           </motion.div>
 
           {/* Saas Cards */}
@@ -100,7 +100,7 @@ const AudienceFit = () => {
               </div>
               <h3 className="text-lg font-semibold text-foreground">Commerce</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">Ecommerce stores that convert browsers to buyers</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">Stores that turn lookers into buyers.</p>
           </motion.div>
 
           {/* Commerce Cards */}

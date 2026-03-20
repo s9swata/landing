@@ -12,26 +12,26 @@ import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 const benefits = [
   {
     number: "01",
-    title: "Launch Faster",
-    description: "We've refined our process to eliminate wasted time. Most projects go live in 2–4 weeks — not months.",
+    title: "Launch Fast",
+    description: "We cut out wasted time. Most sites go live in 2 to 4 weeks, not months.",
     Icon: Timer,
   },
   {
     number: "02",
-    title: "Convert Better",
-    description: "Design decisions backed by conversion principles. Every CTA, headline, and layout element earns its place.",
+    title: "Get More Leads",
+    description: "Every button and word has a job. We build pages that turn visits into sales.",
     Icon: CopyIcon,
   },
   {
     number: "03",
     title: "Sell Smoothly",
-    description: "Mobile-first checkouts, trust signals, and seamless payment flows that turn browsers into buyers.",
+    description: "Easy checkouts for phones. Secure payments make it simple for people to buy.",
     Icon: BlendIcon,
   },
   {
     number: "04",
-    title: "Manage Easily",
-    description: "Simple admin panels, clear order dashboards, and training so you're never dependent on a developer again.",
+    title: "Run It Easily",
+    description: "Simple control panels and clear orders. We show you how, so you do not need us later.",
     Icon: SlidersHorizontal,
   },
 ];
@@ -52,13 +52,13 @@ const Benefits = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center mb-16"
         >
           <motion.div variants={fadeUpVariant} className="mb-4">
-            <PillBadge icon="✨">Why Nuturn</PillBadge>
+            <PillBadge icon="✨">Why Us</PillBadge>
           </motion.div>
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
-            Built to Move the Needle
+            Built to Grow Your Brand
           </motion.h2>
           <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl">
-            We don&apos;t just build things. We build things that work, convert, and scale.
+            We do not just build sites. We build things that work, sell, and grow with you.
           </motion.p>
         </motion.div>
 

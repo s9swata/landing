@@ -8,36 +8,36 @@ import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 const pricingTiers = [
   {
     name: "SaaS",
-    audience: "Founders ready to validate, launch, or scale",
+    audience: "Founders ready to test, launch, or grow",
     features: [
-      "High-converting landing page",
-      "Full SaaS product development",
-      "AI feature integration",
-      "Production-ready codebase",
+      "Landing page that sells",
+      "Full SaaS app build",
+      "Add AI features",
+      "Clean, ready-to-use code",
     ],
     cta: "Get Started",
     popular: true,
   },
   {
     name: "eCommerce",
-    audience: "Local businesses ready to go online",
+    audience: "Local shops ready to sell online",
     features: [
-      "Done-for-you ecommerce store",
-      "Mobile-optimized checkout",
-      "Payment processor setup",
-      "Admin training included",
+      "Online store built for you",
+      "Fast phone checkout",
+      "Secure payment setup",
+      "We teach you to run it",
     ],
     cta: "Start Your Store",
     popular: false,
   },
   {
     name: "Custom",
-    audience: "Unique projects that need a custom fit",
+    audience: "Big projects that need a custom plan",
     features: [
-      "Tailored scope and timeline",
-      "Full-service strategy included",
-      "Unlimited revisions until happy",
-      "Post-launch optimization partner",
+      "Custom time and cost plan",
+      "Full step-by-step help",
+      "Changes until you are happy",
+      "Help to grow after launch",
     ],
     cta: "Let's Talk",
     popular: false,
@@ -60,13 +60,13 @@ const Pricing = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center mb-16"
         >
           <motion.span variants={fadeUpVariant} className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">
-            Investment
+            Cost
           </motion.span>
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
-            Clear Pricing. No Surprises.
+            Clear Prices. No Surprises.
           </motion.h2>
           <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl">
-            Choose the track that fits your stage. Every tier includes our full attention and quality guarantee.
+            Pick the plan that fits you best. Every plan gets our full care and top quality.
           </motion.p>
         </motion.div>
 

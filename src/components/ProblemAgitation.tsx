@@ -10,21 +10,21 @@ import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 const painPoints = [
   {
-    title: "Slow Execution, Missed Deadlines",
+    title: "Slow Work, Missed Dates",
     description:
-      "You've been waiting months for a developer to ship something that should have taken weeks. Opportunities don't wait.",
+      "You wait months for a coder to finish what should take weeks. Time is money.",
     icon: ClockIcon,
   },
   {
-    title: "Visitors Don't Convert to Buyers",
+    title: "People Visit But Do Not Buy",
     description:
-      "Your traffic is real but the sales aren't. Whether it's a SaaS landing page or your online store, leaky funnels cost you every day.",
+      "People visit your site, but they do not buy. Bad pages cost you money every day.",
     icon: ChartBarDecreasingIcon,
   },
   {
-    title: "Orders Lost in DMs and Inboxes",
+    title: "Orders Lost in Chats",
     description:
-      "You're managing sales through WhatsApp and Instagram. It works — until it doesn't. One missed message is a lost sale.",
+      "You sell on phone chats. It works until it breaks. One missed chat is a lost sale.",
     icon: MessageCircleIcon,
   },
 ];
@@ -48,17 +48,17 @@ const ProblemAgitation = () => {
           }} className="flex flex-col items-center text-center mb-16"
         >
           <motion.div variants={fadeUpVariant} className="mb-4">
-            <PillBadge icon="⚡">The Challenge</PillBadge>
+            <PillBadge icon="⚡">The Problem</PillBadge>
           </motion.div>
           <motion.h2
             variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6"
           >
-            We Know Exactly What&apos;s <span className="text-muted-foreground">Slowing You Down</span>
+            We Know What <span className="text-muted-foreground">Slows You Down</span>
           </motion.h2>
           <motion.p
             variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl"
           >
-            There&apos;s a better way. <strong className="text-foreground font-medium">Nuturn Studio</strong> handles the execution so you can focus on growing.
+            There is a better way. <strong className="text-foreground font-medium">Nuturn Studio</strong> does the hard work so you can grow.
           </motion.p>
         </motion.div>
 

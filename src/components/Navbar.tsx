@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { AnimatedUnderline } from "./ui/AnimatedUnderline";
+
 const navLinks = [
   { label: "Services", href: "#services", active: false },
   { label: "Pricing", href: "#pricing", active: false },
@@ -21,13 +24,12 @@ const Navbar = () => (
           </a>
         ))}
       </div>
-      <a
-        href="https://cal.com/saswata-biswas-dfnuvi/client-call"
-        target="_blank"
-        rel="noreferrer" className="px-5 py-2 rounded-md text-sm font-medium bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all shadow-[0_4px_10px_rgba(0,0,0,0.4)]"
+      <Link
+        href="/book-call"
+        className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-background bg-foreground rounded-md hover:bg-foreground/90 transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.4)]"
       >
-        Book a Call
-      </a>
+        <AnimatedUnderline>Book a Free Call</AnimatedUnderline>
+      </Link>
     </div>
   </nav>
 );

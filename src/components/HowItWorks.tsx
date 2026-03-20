@@ -10,26 +10,26 @@ import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 const steps = [
   {
     phase: "Phase 01",
-    title: "Deep Dive & Strategy",
-    description: "We map your funnel, understand your users, and align on the architecture that serves your business.",
+    title: "Learn & Plan",
+    description: "We learn about your users. We make a plan to build what your business needs.",
     icon: SearchIcon,
   },
   {
     phase: "Phase 02",
-    title: "Tailored Plan",
-    description: "We show you the roadmap before we write code. You see exactly what's building, and you get checkpoints to pivot if needed.",
+    title: "Clear Roadmap",
+    description: "We show you the plan before we write any code. You see exactly what we will build.",
     icon: RouteIcon,
   },
   {
     phase: "Phase 03",
     title: "Build & Setup",
-    description: "Full-stack development using modern, scalable tech. We handle hosting, domains, payment setup, and all production details.",
+    description: "We build your app with modern tools. We set up domains, hosting, and payments for you.",
     icon: BinaryIcon,
   },
   {
     phase: "Phase 04",
-    title: "Launch & Improve",
-    description: "Deploy with confidence. We train your team, monitor early metrics, and optimize for conversions in the first 30 days.",
+    title: "Launch & Help",
+    description: "We go live smoothly. We teach your team how to run it and help you grow in the first 30 days.",
     icon: AxeIcon,
   },
 ];
@@ -50,13 +50,13 @@ const HowItWorks = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center mb-16"
         >
           <motion.span variants={fadeUpVariant} className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">
-            Our Process
+            How We Work
           </motion.span>
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
-            Four Steps to <span className="text-muted-foreground">Launch</span>. Zero Hassle.
+            Four Steps to <span className="text-muted-foreground">Launch</span>. No Stress.
           </motion.h2>
           <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl">
-            We&apos;ve refined our process to be entirely frictionless. You provide the vision, we provide the execution.
+            We make building easy for you. You share the idea, and we do the hard work.
           </motion.p>
         </motion.div>
 

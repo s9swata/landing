@@ -1,37 +1,20 @@
 "use client";
 
-import { useEffect, useRef, memo } from "react";
-import Hls from "hls.js";
+import { memo } from "react";
 
 const VideoPlayer = memo(() => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const src = "https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8";
-
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(src);
-      hls.attachMedia(video);
-      return () => hls.destroy();
-    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      video.src = src;
-    }
-  }, []);
-
   return (
     <>
       <video
-        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 -z-10 w-full h-screen object-cover scale-[1.2] origin-left ml-[200px]"
-      />
+        poster="/images/hero_bg.jpeg"
+        className="absolute top-[20%] w-full h-auto object-contain z-0"
+      >
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4" type="video/mp4" />
+      </video>
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#070612] to-transparent z-10 pointer-events-none" />
     </>
   );

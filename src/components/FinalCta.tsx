@@ -13,7 +13,7 @@ const FinalCta = () => {
   return (
     <section className="relative py-32 px-6 bg-background overflow-hidden ">
       <div className="absolute inset-0 bg-gradient-to-b from-background to-primary/5 opacity-50" />
-      
+
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial="hidden"
@@ -22,38 +22,38 @@ const FinalCta = () => {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center p-8 md:p-16 rounded-3xl bg-surface/50 backdrop-blur-md border border-neutral-700 shadow-2xl"
         >
           <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground mb-6">
-            Ready to Build Your <span className="bg-gradient-to-r from-primary to-muted-foreground bg-clip-text text-transparent">Revenue Machine?</span>
+            Ready to Build Your <span className="bg-gradient-to-r from-primary to-muted-foreground bg-clip-text text-transparent">Growth Machine?</span>
           </motion.h2>
-          
+
           <motion.p variants={fadeUpVariant} className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-            Transform your stagnant growth and buggy code into a scalable, automated digital product that users love.
+            Turn slow sales and bad code into an app or store that people love to use and buy from.
           </motion.p>
-          
+
           <motion.div variants={fadeUpVariant} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-foreground font-medium">
               <AnimateIcon animateOnHover>
                 <CircleCheckIcon className="text-muted-foreground w-4 h-4" />
               </AnimateIcon>
-              100% Transparent Pricing
+              100% Clear Upfront Costs
             </div>
             <div className="flex items-center gap-2 text-foreground font-medium">
               <AnimateIcon animateOnHover>
                 <CircleCheckIcon className="text-muted-foreground w-4 h-4" />
               </AnimateIcon>
-              Guaranteed Timelines
+              We Ship on Time
             </div>
           </motion.div>
-          
+
           <motion.div variants={fadeUpVariant} className="flex flex-col items-center">
             <a
               href="https://cal.com/saswata-biswas-dfnuvi/client-call"
               target="_blank"
-              rel="noreferrer" className="px-8 py-4 rounded-full text-base font-semibold bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all block w-full sm:w-auto"
+              rel="noreferrer" className="px-8 py-4 rounded-md text-base font-semibold bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all block w-full sm:w-auto"
             >
               Book Your Free Demo
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              We respond within 24 hours. No long sales process, just a conversation about your goals.
+              We reply in 24 hours. No long sales talk, just a quick chat about your goals.
             </p>
           </motion.div>
         </motion.div>

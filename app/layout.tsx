@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { LenisProvider } from "@/components/providers/lenis-provider";
+import ClickSpark from "@/components/ui/ClickSpark";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <LenisProvider>{children}</LenisProvider>
+          <ClickSpark
+            sparkColor="#fff"
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
+            <LenisProvider>{children}</LenisProvider>
+          </ClickSpark>
         </Providers>
       </body>
     </html>

@@ -4,13 +4,22 @@ import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { PillBadge } from "./ui/PillBadge";
-import { TeamCard } from "./TeamCard";
+import { AuthorCard } from "./AuthorCard";
 import { teamMembers } from "@/data/team";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
+
+const defaultQuotes = [
+  "Crafting high-performance systems that scale effortlessly with user demands.",
+  "Turning complex data into intuitive and seamless frontend experiences.",
+  "Solving critical technical challenges to keep everything running smoothly.",
+  "Architecting robust enterprise solutions with a focus on reliability.",
+  "Building the backbone of our financial infrastructure with precision.",
+  "Ensuring data integrity and responsive interfaces for every user."
+];
 
 const TeamShowcase = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -42,7 +51,7 @@ const TeamShowcase = () => {
             variants={fadeUpVariant}
             className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl"
           >
-            Meet the People Behind the Work
+            Meet the Team Behind It All
           </motion.h2>
         </motion.div>
 
@@ -74,9 +83,16 @@ const TeamShowcase = () => {
               msOverflowStyle: "none",
             }}
           >
-            {teamMembers.map((member) => (
-              <div key={member.id} className="snap-start">
-                <TeamCard member={member} />
+            {teamMembers.map((member, index) => (
+              <div key={member.id} className="snap-start shrink-0">
+                <AuthorCard 
+                  name={member.name}
+                  role={member.role}
+                  avatarSrc={member.image}
+                  experience={member.experience}
+                  quote={defaultQuotes[index % defaultQuotes.length]}
+                  className="h-full"
+                />
               </div>
             ))}
           </div>

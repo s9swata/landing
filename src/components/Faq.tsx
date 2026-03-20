@@ -11,27 +11,27 @@ import {
 const faqs = [
   {
     question: "Is this right for me?",
-    answer: "Perfect for funded startups and ambitious indie builders ready to scale. If you are pre-revenue and pre-funding, we might be overkill. But if you have traction and need a robust, scalable platform to handle growth, you're exactly who we built this for.",
+    answer: "Yes, if you want to grow fast. If you are just starting with no money, we might be too much. But if you are ready to scale up, we are perfect for you.",
   },
   {
     question: "What do you actually build?",
-    answer: "We build two things: (1) High-converting SaaS products with modern architecture, and (2) Done-for-you ecommerce stores for local businesses. Every build includes strategy, design, development, and post-launch support.",
+    answer: "We build two things: (1) Fast SaaS apps, and (2) Online shops for local shops. We do all the plan, design, and code work.",
   },
   {
     question: "How long does it take?",
-    answer: "Most projects launch in 2–4 weeks. High-converting landing pages: 2–3 weeks. Full SaaS MVPs: 3–6 weeks. Ecommerce stores: 10–14 days. Timelines are guaranteed in your contract.",
+    answer: "Most sites go live in 2 to 4 weeks. Landing pages take 2 to 3 weeks. Full SaaS apps take 3 to 6 weeks. Online shops take 10 to 14 days. We stick to these dates.",
   },
   {
-    question: "Will I be able to manage it later?",
-    answer: "Yes. We build simple admin interfaces and train your team on day one. You'll never be dependent on us for basic updates, order management, or content changes. We're here to support, not replace, your team.",
+    question: "Will I be able to run it later?",
+    answer: "Yes. We build easy control panels and teach you how to use them on day one. You will not need us for simple changes or managing orders.",
   },
   {
     question: "What makes this different?",
-    answer: "We're marketers who code. Most agencies build what you ask for. We build what makes money. Every design decision and technical choice is made with your MRR and conversion rate in mind.",
+    answer: "We code to make you money. Most teams just build what you ask for. We build what helps you sell more. Every choice is made to grow your sales.",
   },
   {
     question: "What happens after launch?",
-    answer: "We stay involved for 30 days of optimization. We monitor analytics, A/B test key elements, and help you understand what's working. After that, you have options to extend or we hand everything off fully documented.",
+    answer: "We stay with you for 30 days to help. We check your stats and see what works best. After that, we can stay longer or give everything to you.",
   },
 ];
 
@@ -57,7 +57,7 @@ const Faq = () => {
             You Probably Have <span className="text-muted-foreground">Questions.</span>
           </motion.h2>
           <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl">
-            We believe in total transparency. Here&apos;s everything you need to know before we jump on a discovery call.
+            We list everything out plain and simple. Here is what you need to know before we talk.
           </motion.p>
         </motion.div>
 

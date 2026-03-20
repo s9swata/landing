@@ -3,10 +3,12 @@
 import VideoPlayer from "./VideoPlayer";
 import { ArrowRight } from "lucide-react";
 import { BlurIn } from "./ui/BlurIn";
-import { SplitText } from "./ui/SplitText";
+import { BlurText } from "./ui/BlurText";
+import { AnimatedUnderline } from "./ui/AnimatedUnderline";
+import Magnet from "./ui/Magnet";
 
 const badges = [
-  { icon: "🚀", text: "SaaS Products & Ecommerce Stores" }
+  { icon: "🚀", text: "SaaS Apps & Online Shops" }
 ];
 
 const logoNames = ["Vercel", "Stripe", "Linear", "Notion", "Raycast", "Arc"];
@@ -19,52 +21,46 @@ const HeroSection = () => (
     </div>
 
     {/* Content */}
-    <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-center h-full pt-12">
-      <div className="flex flex-col gap-12 max-w-3xl">
-        <div className="flex flex-col gap-6 items-start">
-          {/* Badge */}
-          <BlurIn delay={0} duration={0.6}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 backdrop-blur-sm px-4 py-1.5">
-              <span className="text-white/80 text-sm">{badges[0].icon}</span>
-              <span className="text-sm font-medium text-white/80">{badges[0].text}</span>
-            </div>
-          </BlurIn>
-
-          {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight lg:leading-[1.2] text-white">
-            <span className="block">
-              <SplitText text="Stop Waiting." delay={0.08} />
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center justify-center h-full pt-[150px]">
+      <div className="flex flex-col gap-8 max-w-4xl items-center">
+        {/* Badge */}
+        <BlurIn delay={0} duration={0.6}>
+          <div className="liquid-glass inline-flex items-center gap-2 rounded-full px-4 py-1.5">
+            <span className=" text-black rounded-full px-2 py-0.5 text-xs font-bold leading-none flex items-center justify-center">
+              {badges[0].icon}
             </span>
-            <span className="inline">
-              <SplitText text="Start Shipping " delay={0.08} startDelay={0.08 * 2} />
-            </span>
-            <span className="inline font-serif italic text-white/90">
-              <SplitText text="What Sells." delay={0.08} startDelay={0.08 * 4} />
-            </span>
-          </h1>
+            <span className="text-sm font-medium text-white/90">{badges[0].text}</span>
+          </div>
+        </BlurIn>
 
-          {/* Subtitle */}
-          <BlurIn delay={0.4} duration={0.6}>
-            <p className="text-white/80 text-lg font-normal leading-relaxed max-w-xl">
-              We build fast, beautiful digital experiences for founders and local business owners — from SaaS products to online stores.
-            </p>
-          </BlurIn>
-        </div>
+        {/* Heading */}
+        <BlurText
+          text="Stop waiting. Start making things that sell."
+          delay={0.1}
+          className="text-6xl md:text-7xl lg:text-[5.5rem] font-serif italic text-white leading-[0.8] tracking-[-4px] justify-center"
+        />
 
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 items-center">
-          <BlurIn delay={0.6} duration={0.6}>
-            <a 
-              href="https://cal.com/saswata-biswas-dfnuvi/client-call"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium bg-white text-black hover:opacity-90 transition-opacity"
+        {/* Subtitle */}
+        <BlurIn delay={0.8} duration={0.6}>
+          <p className="text-white/80 text-lg font-normal leading-relaxed max-w-xl mx-auto">
+            We make fast, nice websites for founders and local shops. We build SaaS apps and online stores.
+          </p>
+        </BlurIn>
+      </div>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 items-center mt-12">
+        <BlurIn delay={1.0} duration={0.6}>
+          <Magnet padding={50} disabled={false} magnetStrength={5}>
+            <a
+              href="/book-call"
+              className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#070612] rounded-md px-5 py-3 text-sm font-medium transition-transform hover:scale-105"
             >
               Book a Free Call
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-          </BlurIn>
-        </div>
+          </Magnet>
+        </BlurIn>
       </div>
     </div>
 

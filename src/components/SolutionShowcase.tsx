@@ -11,17 +11,17 @@ import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 const features = [
   {
     title: "Ship Fast",
-    description: "From strategy to live product in weeks, not months. We eliminate waiting and excuses.",
+    description: "We go from idea to live app in weeks, not months. No more waiting.",
     icon: AxeIcon,
   },
   {
-    title: "Convert Better",
-    description: "Every pixel is designed to turn visitors into buyers and trials into paying customers.",
+    title: "Get More Sales",
+    description: "Every part of the site is made to turn visitors into paying customers.",
     icon: CompassIcon,
   },
   {
-    title: "Sell Smoothly",
-    description: "From SaaS dashboards to ecommerce stores — built clean, managed easily.",
+    title: "Sell With Ease",
+    description: "From SaaS apps to online shops — built well and easy to run.",
     icon: CherryIcon,
   },
 ];
@@ -50,12 +50,12 @@ const SolutionShowcase = () => {
           <motion.h2
             variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6"
           >
-            Everything You Need to Launch and Grow
+            All You Need to Launch and Grow
           </motion.h2>
           <motion.p
             variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl"
           >
-            Two focused service lines. One studio. Unlimited execution.
+            Two main services. One team. We get it done.
           </motion.p>
         </motion.div>
 
@@ -106,16 +106,16 @@ const SolutionShowcase = () => {
             <div className="h-full p-8 md:p-10 rounded-2xl bg-surface/50 backdrop-blur-md border border-neutral-700">
               <h3 className="text-foreground font-medium text-sm tracking-wide uppercase mb-3">For Founders & Builders</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Custom SaaS products, AI integrations, and high-converting landing pages built with Next.js and modern architecture. Ship faster, scale confidently.
+                Custom SaaS apps, AI tools, and great landing pages. Built with Next.js. Ship faster and grow easy.
               </p>
             </div>
           </motion.div>
 
           <motion.div variants={fadeUpVariant}>
             <div className="h-full p-8 md:p-10 rounded-2xl bg-surface/50 backdrop-blur-md border border-neutral-700">
-              <h3 className="text-foreground font-medium text-sm tracking-wide uppercase mb-3">For Local Brands & Stores</h3>
+              <h3 className="text-foreground font-medium text-sm tracking-wide uppercase mb-3">For Local Shops & Brands</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Done-for-you ecommerce stores with mobile-first design, smooth checkout, payment setup, and admin tools you can manage from your phone.
+                Online stores built for you. They work great on phones. Easy checkout, set up payments, and run it all from your phone.
               </p>
             </div>
           </motion.div>
