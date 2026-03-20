@@ -79,7 +79,7 @@ const Pricing = () => {
           {pricingTiers.map((tier, index) => (
             <motion.div key={index} variants={fadeUpVariant} className="h-full">
               <AnimateIcon animateOnHover className="h-full">
-                <Card variant="glass" className={`h-full flex flex-col relative ${tier.popular ? "border-primary/30" : ""}`}>
+                <Card className={`h-full flex flex-col relative ${tier.popular ? "bg-primary/5 border-primary/30" : "bg-surface/50 backdrop-blur-md border-border"}`}>
                   {tier.popular && (
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-primary text-background text-xs font-bold rounded-full uppercase tracking-wider">
                       Most Popular

@@ -74,7 +74,7 @@ const ProblemAgitation = () => {
           {painPoints.map((point, index) => (
             <motion.div key={index} variants={fadeUpVariant}>
               <AnimateIcon animateOnHover className="h-full">
-                <Card variant="glass" className="h-full overflow-hidden">
+                <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 overflow-hidden">
                   <CardHeader>
                     <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
                       <point.icon className="w-5 h-5 text-foreground" />

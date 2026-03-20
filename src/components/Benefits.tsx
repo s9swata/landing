@@ -71,7 +71,7 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <motion.div key={index} variants={fadeUpVariant} className="h-full">
               <AnimateIcon animateOnHover className="h-full">
-                <Card variant="glass" className="h-full hover:bg-primary/5 transition-colors">
+                <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 hover:bg-primary/5 transition-colors">
                   <CardHeader className="relative">
                     <div className="absolute top-6 right-6 text-4xl font-bold text-foreground/10 transition-colors pointer-events-none">
                       {benefit.number}

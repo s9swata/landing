@@ -35,7 +35,7 @@ const Contact = () => {
           viewport={{ once: true, margin: "-50px" }}
           variants={fadeUpVariant}
         >
-          <form className="bg-surface/50 backdrop-blur-xl border border-border p-8 rounded-2xl space-y-6 liquid-glass-strong">
+          <form className="bg-surface/50 backdrop-blur-md border border-border p-8 rounded-2xl space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Name</label>
@@ -75,7 +75,7 @@ const Contact = () => {
               />
             </div>
 
-            <Button variant="glass" className="w-full font-semibold h-12 rounded-xl group">
+            <Button className="w-full bg-pearl text-pearl-foreground hover:bg-pearl/90 font-semibold h-12 rounded-xl group">
               Send Message
               <AnimateIcon animateOnHover className="ml-2 group-hover:translate-x-1 transition-transform">
                 <SendIcon className="w-3.5 h-3.5" />
