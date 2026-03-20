@@ -13,8 +13,8 @@ const Footer = () => {
           <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
           <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
           <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
+          <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+          <a href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
         </div>
       </div>
       

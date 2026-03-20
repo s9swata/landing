@@ -10,7 +10,7 @@ const VideoPlayer = memo(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    const src = "https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8";
+    const src = "https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8";
 
     if (Hls.isSupported()) {
       const hls = new Hls();
@@ -23,13 +23,17 @@ const VideoPlayer = memo(() => {
   }, []);
 
   return (
-    <video
-      ref={videoRef}
-      autoPlay
-      loop
-      muted
-      playsInline className="w-full h-full object-cover"
-    />
+    <>
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 -z-10 w-full h-screen object-cover scale-[1.2] origin-left ml-[200px]"
+      />
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#070612] to-transparent z-10 pointer-events-none" />
+    </>
   );
 });
 

@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import type { TeamMember } from "@/data/team";
 
 interface TeamCardProps {
@@ -18,37 +16,41 @@ function TeamCard({ member }: TeamCardProps) {
     .toUpperCase();
 
   return (
-    <Card className="w-[280px] md:w-[320px] lg:w-[360px] shrink-0 bg-surface/50 backdrop-blur-md border-neutral-700">
-      <CardContent className="flex flex-col items-center text-center p-6">
-        <Avatar className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] mb-4 border-2 border-neutral-700">
-          <AvatarImage src={member.image} alt={member.name} />
-          <AvatarFallback className="bg-muted text-foreground text-2xl">
-            {initials}
-          </AvatarFallback>
-        </Avatar>
+    <div className="relative w-[280px] md:w-[320px] lg:w-[360px] shrink-0 mt-16">
+      {/* The Card */}
+      <div className="bg-surface/40 backdrop-blur-xl rounded-xl pt-20 pb-8 px-6 shadow-2xl relative border border-white/10 flex flex-col items-center">
+        {/* Signature Overlap PFP */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border-[6px] border-background overflow-hidden bg-neutral-900 flex items-center justify-center">
+          <Avatar className="w-full h-full rounded-none">
+            <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+            <AvatarFallback className="bg-neutral-800 text-white text-3xl font-bold">
+              {initials}
+            </AvatarFallback>
+          </Avatar>
+        </div>
 
-        <h3 className="text-lg font-semibold text-foreground mb-1">
-          {member.name}
-        </h3>
+        {/* Profile Info */}
+        <div className="text-center w-full space-y-6">
+          {/* Name Section */}
+          <div className="space-y-1">
+            <p className="text-[0.65rem] uppercase tracking-[0.2em] text-neutral-500 font-bold">Identity</p>
+            <h3 className="text-2xl md:text-3xl font-extrabold tracking-tighter text-white leading-tight uppercase line-clamp-2">{member.name}</h3>
+            <p className="text-neutral-400 text-sm font-medium tracking-tight line-clamp-2">{member.role}</p>
+          </div>
 
-        <p className="text-sm text-muted-foreground mb-2">{member.role}</p>
-
-        {member.experience && (
-          <Badge
-            variant="outline"
-            className="border border-pearl text-pearl mb-2"
+          {/* Experience Section */}
+          <div
+            className={`pt-2 flex justify-center ${
+              member.experience ? "opacity-100" : "opacity-0 invisible"
+            }`}
           >
-            {member.experience}
-          </Badge>
-        )}
-
-        {member.bio && (
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            {member.bio}
-          </p>
-        )}
-      </CardContent>
-    </Card>
+            <Badge variant="outline" className="border-neutral-700 text-neutral-300 font-normal">
+              {member.experience || "N/A"}
+            </Badge>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
