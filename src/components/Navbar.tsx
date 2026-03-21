@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedUnderline } from "./ui/AnimatedUnderline";
 
 const navLinks = [
@@ -10,7 +11,10 @@ const navLinks = [
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
     <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <span className="font-medium tracking-tight text-foreground text-lg drop-shadow-[0_8px_24px_rgba(0,0,0,1)] drop-shadow-[0_2px_6px_rgba(0,0,0,1)]">Nuturn</span>
+      <div className="flex items-center gap-2">
+        <Image src="/images/logo.png" alt="Nuturn Logo" width={36} height={36} />
+        <span className="font-medium tracking-tight text-foreground text-lg drop-shadow-[0_8px_24px_rgba(0,0,0,1)] drop-shadow-[0_2px_6px_rgba(0,0,0,1)]">Nuturn</span>
+      </div>
       <div className="hidden md:flex items-center gap-8">
         {navLinks.map((link) => (
           <a

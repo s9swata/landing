@@ -1,12 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Question } from "@phosphor-icons/react";
 
 const faqs = [
   {
@@ -42,38 +43,57 @@ const fadeUpVariant = {
 
 const Faq = () => {
   return (
-    <section id="faq" className="relative py-24 px-6 bg-background overflow-hidden ">
-      <div className="max-w-3xl mx-auto">
+    <section id="faq" className="relative py-32 px-6 bg-background overflow-hidden ">
+      
+      {/* Abstract Background Element */}
+      <div className="absolute left-0 bottom-0 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full pointer-events-none -z-10" />
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+        
+        {/* Left Sticky Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} className="flex flex-col items-center text-center mb-16"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }} 
+          className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-40"
         >
-          <motion.span variants={fadeUpVariant} className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">
-            Clear Answers
-          </motion.span>
-          <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
-            You Probably Have <span className="text-muted-foreground">Questions.</span>
+          <motion.div variants={fadeUpVariant} className="inline-flex items-center gap-1.5 mb-4 px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
+            <Question weight="bold" className="w-3.5 h-3.5 text-primary" />
+            <span className="text-sm font-medium text-primary">Clear Answers</span>
+          </motion.div>
+          <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6 leading-[1.1]">
+            You Probably Have <span className="text-muted-foreground block">Questions.</span>
           </motion.h2>
-          <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl">
-            We list everything out plain and simple. Here is what you need to know before we talk.
+          <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-md mb-8">
+            We list everything out plain and simple. Here is what you need to know before we talk over a quick intro call.
           </motion.p>
+          <motion.div variants={fadeUpVariant}>
+            <a href="#contact" className="hidden lg:inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
+              Still need answers? Ping us <span className="text-xl">→</span>
+            </a>
+          </motion.div>
         </motion.div>
 
+        {/* Right Accordion List */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={fadeUpVariant}
+          className="lg:col-span-7"
         >
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-border bg-surface/50 backdrop-blur-md rounded-xl px-6">
-                <AccordionTrigger className="text-foreground hover:no-underline font-medium text-left py-5">
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`} 
+                className="border border-neutral-800 bg-surface/30 hover:bg-surface/50 transition-colors backdrop-blur-md rounded-xl px-4 lg:px-6 data-[state=open]:bg-surface/60"
+              >
+                <AccordionTrigger className="text-white hover:no-underline font-medium text-left py-4 text-base hover:text-primary transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                <AccordionContent className="text-neutral-400 text-sm leading-relaxed pb-4 pr-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

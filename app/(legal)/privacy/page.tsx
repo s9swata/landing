@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <article className="prose prose-invert max-w-none">
       <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>
-      
+
       <p className="text-muted-foreground mb-8">
         <strong>Last updated:</strong> March 20, 2026
       </p>
@@ -17,16 +17,16 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Nuturn Studio (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy 
-          explains how we collect, use, disclose, and safeguard your information when you visit our website 
-          or use our services. Please read this privacy policy carefully. By using our website and services, 
+          Nuturn Studio (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy
+          explains how we collect, use, disclose, and safeguard your information when you visit our website
+          or use our services. Please read this privacy policy carefully. By using our website and services,
           you consent to the practices described in this policy.
         </p>
       </section>
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">2. Information We Collect</h2>
-        
+
         <h3 className="text-xl font-medium text-foreground mb-3">Personal Information</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
           We may collect personal information that you voluntarily provide to us, including:
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">4. Cookies and Tracking Technologies</h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          We use cookies and similar tracking technologies to collect information about your browsing activities. 
+          We use cookies and similar tracking technologies to collect information about your browsing activities.
           This includes:
         </p>
         <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
           <li>Regular security assessments and updates</li>
         </ul>
         <p className="text-muted-foreground leading-relaxed mt-4">
-          While we strive to protect your information, no method of transmission over the Internet is 100% secure. 
+          While we strive to protect your information, no method of transmission over the Internet is 100% secure.
           We cannot guarantee absolute security.
         </p>
       </section>
@@ -134,8 +134,8 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">8. Data Retention</h2>
         <p className="text-muted-foreground leading-relaxed">
-          We retain your personal information for as long as necessary to fulfill the purposes outlined in this 
-          Privacy Policy, unless a longer retention period is required by law. When information is no longer needed, 
+          We retain your personal information for as long as necessary to fulfill the purposes outlined in this
+          Privacy Policy, unless a longer retention period is required by law. When information is no longer needed,
           we securely delete or anonymize it.
         </p>
       </section>
@@ -156,8 +156,8 @@ export default function PrivacyPage() {
         </ul>
         <p className="text-muted-foreground leading-relaxed mt-4">
           To exercise any of these rights, please contact us at{" "}
-          <a href="mailto:hello@nuturn.studio" className="text-foreground hover:underline">
-            hello@nuturn.studio
+          <a href="mailto:hello@nuturnstudio.com" className="text-foreground hover:underline">
+            hello@nuturnstudio.com
           </a>
           .
         </p>
@@ -166,8 +166,8 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">10. Children&apos;s Privacy</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Our services are not directed to individuals under the age of 18. We do not knowingly collect 
-          personal information from children. If you believe we have collected information from a child, 
+          Our services are not directed to individuals under the age of 18. We do not knowingly collect
+          personal information from children. If you believe we have collected information from a child,
           please contact us immediately.
         </p>
       </section>
@@ -175,8 +175,8 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">11. Links to Other Websites</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Our website may contain links to third-party websites. We are not responsible for the privacy 
-          practices of these external sites. We encourage you to review the privacy policies of any 
+          Our website may contain links to third-party websites. We are not responsible for the privacy
+          practices of these external sites. We encourage you to review the privacy policies of any
           third-party websites you visit.
         </p>
       </section>
@@ -184,8 +184,8 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">12. International Data Transfers</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Your information may be transferred to and processed in countries other than your country of residence. 
-          We ensure appropriate safeguards are in place for such transfers, including Standard Contractual Clauses 
+          Your information may be transferred to and processed in countries other than your country of residence.
+          We ensure appropriate safeguards are in place for such transfers, including Standard Contractual Clauses
           or equivalent legal mechanisms.
         </p>
       </section>
@@ -193,8 +193,8 @@ export default function PrivacyPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold text-foreground mb-4">13. Changes to This Privacy Policy</h2>
         <p className="text-muted-foreground leading-relaxed">
-          We may update this Privacy Policy from time to time. We will notify you of any material changes by 
-          posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date. We encourage 
+          We may update this Privacy Policy from time to time. We will notify you of any material changes by
+          posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date. We encourage
           you to review this Privacy Policy periodically for any changes.
         </p>
       </section>
@@ -206,7 +206,7 @@ export default function PrivacyPage() {
         </p>
         <div className="text-muted-foreground leading-relaxed">
           <p><strong>Nuturn Studio</strong></p>
-          <p>Email: <a href="mailto:hello@nuturn.studio" className="text-foreground hover:underline">hello@nuturn.studio</a></p>
+          <p>Email: <a href="mailto:hello@nuturnstudio.com" className="text-foreground hover:underline">hello@nuturnstudio.com</a></p>
         </div>
       </section>
     </article>

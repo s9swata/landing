@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { motion } from "motion/react";
 import { CheckIcon } from "@/components/animate-ui/icons/check";
-import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const pricingTiers = [
   {
@@ -74,42 +73,60 @@ const Pricing = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }} className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }} className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
         >
           {pricingTiers.map((tier, index) => (
-            <motion.div key={index} variants={fadeUpVariant} className="h-full">
-              <AnimateIcon animateOnHover className="h-full">
-                <Card className={`h-full flex flex-col relative ${tier.popular ? "bg-primary/5 border-primary/30" : "bg-surface/50 backdrop-blur-md border-border"}`}>
+            <motion.div key={index} variants={fadeUpVariant} className="h-full list-none">
+              <div className="relative h-full rounded-2xl border border-neutral-800 p-2 md:rounded-3xl md:p-3 bg-neutral-900/20">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={64}
+                  inactiveZone={0.01}
+                />
+                <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-neutral-800/50 bg-black/40 p-6 md:p-8 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+                  
                   {tier.popular && (
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-1 bg-primary text-background text-xs font-bold rounded-full uppercase tracking-wider">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-0 px-4 py-1.5 bg-primary text-background text-[10px] font-bold rounded-b-xl uppercase tracking-widest shadow-lg z-10">
                       Most Popular
                     </div>
                   )}
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-foreground mb-2">{tier.name}</CardTitle>
-                    <p className="text-sm text-muted-foreground min-h-[40px] leading-relaxed select-none">{tier.audience}</p>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <ul className="space-y-4">
+
+                  <div className="relative flex flex-1 flex-col justify-between gap-6 z-10">
+                    <div className="space-y-3">
+                      <h3 className="font-sans text-2xl font-semibold text-white">
+                        {tier.name}
+                      </h3>
+                      <p className="font-sans text-sm text-neutral-400 min-h-[40px] leading-relaxed select-none">
+                        {tier.audience}
+                      </p>
+                    </div>
+
+                    <ul className="space-y-4 flex-1 mt-6">
                       {tier.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckIcon className="w-4 h-4 text-foreground flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground leading-relaxed">{feature}</span>
+                          <CheckIcon className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm font-medium text-neutral-300 leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                  <CardFooter>
+
                     <a
                       href="https://cal.com/saswata-biswas-dfnuvi/client-call"
                       target="_blank"
-                      rel="noreferrer" className="w-full py-3 rounded-xl text-sm font-medium text-center transition-all bg-pearl text-pearl-foreground hover:bg-pearl/90"
+                      rel="noreferrer" 
+                      className={`w-full py-3 mt-6 rounded-xl text-sm font-semibold text-center transition-all ${
+                        tier.popular 
+                          ? "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(255,255,255,0.3)]" 
+                          : "bg-neutral-800 text-white hover:bg-neutral-700"
+                      }`}
                     >
                       {tier.cta}
                     </a>
-                  </CardFooter>
-                </Card>
-              </AnimateIcon>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

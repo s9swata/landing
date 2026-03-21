@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "motion/react";
 import { PillBadge } from "./ui/PillBadge";
 import { Timer } from "@/components/animate-ui/icons/timer";
 import { CopyIcon } from "@/components/animate-ui/icons/copy";
@@ -15,24 +14,32 @@ const benefits = [
     title: "Launch Fast",
     description: "We cut out wasted time. Most sites go live in 2 to 4 weeks, not months.",
     Icon: Timer,
+    className: "md:col-span-2 md:row-span-2 lg:p-12",
+    titleClass: "text-2xl md:text-3xl",
   },
   {
     number: "02",
     title: "Get More Leads",
     description: "Every button and word has a job. We build pages that turn visits into sales.",
     Icon: CopyIcon,
+    className: "md:col-span-1 md:row-span-1",
+    titleClass: "text-xl",
   },
   {
     number: "03",
     title: "Sell Smoothly",
     description: "Easy checkouts for phones. Secure payments make it simple for people to buy.",
     Icon: BlendIcon,
+    className: "md:col-span-1 md:row-span-1",
+    titleClass: "text-xl",
   },
   {
     number: "04",
     title: "Run It Easily",
     description: "Simple control panels and clear orders. We show you how, so you do not need us later.",
     Icon: SlidersHorizontal,
+    className: "md:col-span-3 md:row-span-1 flex-col md:flex-row items-start md:items-center justify-between",
+    titleClass: "text-xl md:text-2xl",
   },
 ];
 
@@ -44,7 +51,7 @@ const fadeUpVariant = {
 const Benefits = () => {
   return (
     <section className="relative py-24 px-6 bg-background overflow-hidden ">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -66,29 +73,35 @@ const Benefits = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }} 
+          className="grid grid-cols-1 md:grid-cols-3 auto-rows-[minmax(180px,auto)] gap-4 lg:gap-6"
         >
           {benefits.map((benefit, index) => (
-            <motion.div key={index} variants={fadeUpVariant} className="h-full">
+            <motion.div key={index} variants={fadeUpVariant} className={`h-full ${benefit.className}`}>
               <AnimateIcon animateOnHover className="h-full">
-                <Card className="h-full bg-surface/50 backdrop-blur-md border-neutral-700 hover:bg-primary/5 transition-colors">
-                  <CardHeader className="relative">
-                    <div className="absolute top-6 right-6 text-4xl font-bold text-foreground/10 transition-colors pointer-events-none">
-                      {benefit.number}
-                    </div>
-                    <div className="w-12 h-12 rounded-lg bg-primary/5 flex items-center justify-center mb-4 border border-neutral-700">
-                      <benefit.Icon className="w-5 h-5 text-foreground" />
-                    </div>
-                    <CardTitle className="text-xl font-medium text-foreground">
+                <div className={`h-full flex flex-col p-6 lg:p-8 rounded-[2rem] bg-surface/30 backdrop-blur-md border border-neutral-800 hover:bg-neutral-800/40 transition-colors relative overflow-hidden group ${index === 3 ? "md:flex-row gap-6 md:items-center" : ""}`}>
+                  
+                  {/* Subtle inner glow on hover */}
+                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[inherit] pointer-events-none" />
+
+                  <div className="absolute top-6 right-8 text-6xl font-black text-white/5 transition-colors pointer-events-none select-none">
+                    {benefit.number}
+                  </div>
+                  
+                  <div className={`w-14 h-14 rounded-xl bg-neutral-800 flex items-center justify-center shrink-0 border border-neutral-700/50 ${index === 3 ? "md:mb-0 mb-6" : "mb-6"}`}>
+                    <benefit.Icon className="w-6 h-6 text-foreground" />
+                  </div>
+                  
+                  <div className={`flex flex-col ${index === 3 ? "md:w-3/4" : "flex-1 justify-end"}`}>
+                    <h3 className={`font-medium text-foreground mb-3 ${benefit.titleClass}`}>
                       {benefit.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed md:text-lg">
                       {benefit.description}
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+
+                </div>
               </AnimateIcon>
             </motion.div>
           ))}

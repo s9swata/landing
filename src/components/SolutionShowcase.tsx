@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PillBadge } from "./ui/PillBadge";
 import { AxeIcon } from "@/components/animate-ui/icons/axe";

@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ProblemAgitation from "@/components/ProblemAgitation";
-import SolutionShowcase from "@/components/SolutionShowcase";
+import ProblemSolutionSplit from "@/components/ProblemSolutionSplit";
 import AudienceFit from "@/components/AudienceFit";
 import Benefits from "@/components/Benefits";
 import Pricing from "@/components/Pricing";
@@ -19,8 +18,7 @@ export default function Home() {
       <div className="fixed top-0 inset-x-0 h-32 bg-gradient-to-b from-background to-transparent z-40 pointer-events-none" />
       <Navbar />
       <HeroSection />
-      <ProblemAgitation />
-      <SolutionShowcase />
+      <ProblemSolutionSplit />
       <AudienceFit />
       <Benefits />
       <Pricing />
