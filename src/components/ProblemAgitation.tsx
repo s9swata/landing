@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PillBadge } from "./ui/PillBadge";
+import { FlipText } from "./ui/flip-text";
 import { ClockIcon } from "@/components/animate-ui/icons/clock";
 import { ChartBarDecreasingIcon } from "@/components/animate-ui/icons/chart-bar-decreasing";
 import { MessageCircleIcon } from "@/components/animate-ui/icons/message-circle";
@@ -58,7 +59,7 @@ const ProblemAgitation = () => {
           <motion.p
             variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl"
           >
-            There is a better way. <strong className="text-foreground font-medium">Nuturn Studio</strong> does the hard work so you can grow.
+            There is a better way. <FlipText className="text-foreground font-medium">Nuturn Studio</FlipText> does the hard work so you can grow.
           </motion.p>
         </motion.div>
 
