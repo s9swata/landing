@@ -3,7 +3,7 @@
 import VideoPlayer from "./VideoPlayer";
 import { ArrowRight } from "lucide-react";
 import { BlurIn } from "./ui/BlurIn";
-import { BlurText } from "./ui/BlurText";
+import RotatingText from "./ui/RotatingText";
 import { AnimatedUnderline } from "./ui/AnimatedUnderline";
 import Magnet from "./ui/Magnet";
 
@@ -34,11 +34,22 @@ const HeroSection = () => (
         </BlurIn>
 
         {/* Heading */}
-        <BlurText
-          text="Stop waiting. Start making things that sell."
-          delay={0.1}
-          className="text-6xl md:text-7xl lg:text-[5.5rem] font-serif italic text-white leading-[0.8] tracking-[-4px] justify-center"
-        />
+        <BlurIn delay={0.1} duration={0.6}>
+          <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] font-serif italic text-white leading-[0.8] tracking-[-4px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
+            <span>Stop waiting.</span>
+            <span className="flex items-center gap-3">
+              Start
+              <RotatingText
+                texts={['Shipping', 'Building', 'Launching', 'Scaling']}
+                mainClassName="bg-white/10 px-4 sm:px-5 py-2 sm:py-3 rounded-2xl overflow-hidden justify-center text-white"
+                staggerDuration={0.03}
+                staggerFrom="last"
+                rotationInterval={3000}
+              />
+            </span>
+            <span>What Sells.</span>
+          </h1>
+        </BlurIn>
 
         {/* Subtitle */}
         <BlurIn delay={0.8} duration={0.6}>
