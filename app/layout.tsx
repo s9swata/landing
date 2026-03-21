@@ -6,11 +6,11 @@ import { LenisProvider } from "@/components/providers/lenis-provider";
 import ClickSpark from "@/components/ui/ClickSpark";
 import { cn } from "@/lib/utils";
 
-const firaCodeFiraCode = Fira_Code({subsets:['menu','cyrillic','cyrillic-ext','greek','greek-ext','latin','latin-ext','symbols2'],weight:['300','400','500','600','700'],variable:'--font-fira-code'});
+const firaCodeFiraCode = Fira_Code({subsets:['latin','cyrillic','cyrillic-ext','greek','greek-ext','latin-ext','symbols2'],weight:['300','400','500','600','700'],variable:'--font-fira-code'});
 
-const karlaKarla = Karla({subsets:['menu','latin','latin-ext'],weight:['200','300','400','500','600','700','800'],variable:'--font-karla'});
+const karlaKarla = Karla({subsets:['latin','latin-ext'],weight:['200','300','400','500','600','700','800'],variable:'--font-karla'});
 
-const schibstedGroteskSchibstedGrotesk = Schibsted_Grotesk({subsets:['menu','latin','latin-ext'],weight:['400','500','600','700','800','900'],variable:'--font-schibsted-grotesk'});
+const schibstedGroteskSchibstedGrotesk = Schibsted_Grotesk({subsets:['latin','latin-ext'],weight:['400','500','600','700','800','900'],variable:'--font-schibsted-grotesk'});
 
 const inter = Inter({ subsets: ["latin"] });
 
