@@ -60,9 +60,9 @@ const HeroSection = () => (
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 items-center mt-12">
+      <div className="flex flex-wrap justify-center gap-4 items-center mt-16">
         <BlurIn delay={1.0} duration={0.6}>
-          <Magnet padding={50} disabled={false} magnetStrength={5}>
+          <Magnet padding={20} disabled={false} magnetStrength={5}>
             <a
               href="/book-call"
               className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#070612] rounded-md px-5 py-3 text-sm font-medium transition-transform hover:scale-105"
@@ -76,7 +76,7 @@ const HeroSection = () => (
     </div>
 
     {/* Logo Marquee */}
-    <div className="absolute bottom-8 left-0 right-0 z-20 flex flex-wrap justify-center gap-8 md:gap-12 px-6">
+    <div className="absolute bottom-16 left-0 right-0 z-20 flex flex-wrap justify-center gap-8 md:gap-12 px-6">
       {logoNames.map((name, i) => (
         <BlurIn key={name} delay={0.8 + (i * 0.1)} duration={0.6}>
           <span className="text-white/40 text-sm font-medium tracking-wide select-none">

@@ -48,7 +48,7 @@ const FinalCta = () => {
             <a
               href="https://cal.com/saswata-biswas-dfnuvi/client-call"
               target="_blank"
-              rel="noreferrer" className="px-8 py-4 rounded-md text-base font-semibold bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all block w-full sm:w-auto"
+              rel="noreferrer" className="px-6 py-3 rounded-md text-sm font-semibold bg-pearl text-pearl-foreground hover:bg-pearl/90 transition-all block w-full sm:w-auto"
             >
               Book Your Free Demo
             </a>

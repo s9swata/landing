@@ -12,14 +12,18 @@ const fadeUpVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
-const defaultQuotes = [
-  "Crafting high-performance systems that scale effortlessly with user demands.",
-  "Turning complex data into intuitive and seamless frontend experiences.",
-  "Solving critical technical challenges to keep everything running smoothly.",
-  "Architecting robust enterprise solutions with a focus on reliability.",
-  "Building the backbone of our financial infrastructure with precision.",
-  "Ensuring data integrity and responsive interfaces for every user."
-];
+const memberQuotes: Record<string, string> = {
+  "amritesh-anshu": "Building the architectural foundation that powers our most ambitious projects.",
+  "saswata-biswas": "Transforming complex requirements into elegant, production-ready solutions.",
+  "rahul-raj": "Liquidity Infrastructure Associates @ JP Morgan — Architecting robust financial systems with precision at enterprise scale.",
+  "bikram-chandra": "Software Engineer @ Persistent Company — Developing scalable solutions that drive business growth.",
+  "shyamal-gandhi": "Ensuring seamless user experiences through reliable support systems.",
+  "naincy-raj": "Bridging frontend elegance with rock-solid backend architecture.",
+  "pritam-debnath": "Amplifying brand presence and engaging audiences across digital channels.",
+  "subhi-nigam": "Turning raw data into actionable insights through intuitive interfaces.",
+  "sanjeet-kumar": "Resolving technical challenges swiftly to keep operations running.",
+  "riya-gupta": "Designing efficient databases and crafting seamless user experiences."
+};
 
 const TeamShowcase = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -56,46 +60,53 @@ const TeamShowcase = () => {
         </motion.div>
 
         <div className="relative group">
-          {/* Left Arrow */}
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-surface/80 backdrop-blur-md border border-neutral-700 flex items-center justify-center text-foreground hover:bg-surface transition-colors hidden md:flex"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          {/* Right Arrow */}
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-surface/80 backdrop-blur-md border border-neutral-700 flex items-center justify-center text-foreground hover:bg-surface transition-colors hidden md:flex"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          {/* Left Fade Gradient */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          
+          {/* Right Fade Gradient */}
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* Scroll Container */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
+            className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
             }}
           >
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member) => (
               <div key={member.id} className="snap-start shrink-0">
                 <AuthorCard 
                   name={member.name}
                   role={member.role}
                   avatarSrc={member.image}
                   experience={member.experience}
-                  quote={defaultQuotes[index % defaultQuotes.length]}
+                  quote={memberQuotes[member.id] || "Dedicated to delivering excellence in every project."}
                   className="h-full"
                 />
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Navigation Arrows - Bottom Center */}
+        <div className="flex justify-center items-center gap-4 mt-8">
+          <button
+            onClick={() => scroll("left")}
+            className="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-md border border-neutral-700 flex items-center justify-center text-foreground hover:bg-surface transition-colors"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button
+            onClick={() => scroll("right")}
+            className="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-md border border-neutral-700 flex items-center justify-center text-foreground hover:bg-surface transition-colors"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

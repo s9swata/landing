@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { AnimatedUnderline } from "@/components/ui/AnimatedUnderline";
 import { Input } from "@/components/ui/input";
 import { SendIcon } from "@/components/animate-ui/icons/send";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
@@ -75,12 +76,14 @@ const Contact = () => {
               />
             </div>
 
-            <Button className="w-full bg-pearl text-pearl-foreground hover:bg-pearl/90 font-semibold h-12 rounded-xl group">
-              Send Message
-              <AnimateIcon animateOnHover className="ml-2 group-hover:translate-x-1 transition-transform">
-                <SendIcon className="w-3.5 h-3.5" />
-              </AnimateIcon>
-            </Button>
+            <div className="flex justify-center">
+              <Button className="w-full bg-pearl text-pearl-foreground hover:bg-pearl/90 font-semibold h-9 rounded-xl group">
+                <AnimatedUnderline>Send Message</AnimatedUnderline>
+                <AnimateIcon animateOnHover className="ml-2 group-hover:translate-x-1 transition-transform">
+                  <SendIcon className="w-3.5 h-3.5" />
+                </AnimateIcon>
+              </Button>
+            </div>
 
             <p className="text-center text-sm text-muted-foreground pt-4 ">
               Prefer to chat directly? <a href="https://cal.com/saswata-biswas-dfnuvi/client-call" target="_blank" rel="noreferrer" className="text-foreground hover:underline underline-offset-4 font-medium transition-colors">Book a call on Cal.com</a>
