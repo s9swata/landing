@@ -21,7 +21,7 @@ const HeroSection = () => (
     </div>
 
     {/* Content */}
-    <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center justify-center h-full pt-[150px]">
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center justify-center h-full pt-20 lg:pt-24">
       <div className="flex flex-col gap-5 max-w-4xl items-center">
         {/* Badge */}
         <BlurIn delay={0} duration={0.6}>
@@ -35,7 +35,7 @@ const HeroSection = () => (
 
         {/* Heading */}
         <BlurIn delay={0.1} duration={0.6}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-heading text-white leading-[0.8] tracking-[-2px] sm:tracking-[-3px] md:tracking-[-4px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-heading text-white leading-[0.85] tracking-[-2px] sm:tracking-[-3px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
             <span>Stop waiting.</span>
             <span className="flex items-center gap-3">
               Start
@@ -59,7 +59,7 @@ const HeroSection = () => (
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 items-center mt-10">
+      <div className="flex flex-wrap justify-center gap-4 items-center mt-6 lg:mt-8">
         <BlurIn delay={1.0} duration={0.6}>
           <Magnet padding={20} disabled={false} magnetStrength={5}>
             <a
