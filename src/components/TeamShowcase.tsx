@@ -22,16 +22,15 @@ const memberQuotes: Record<string, string> = {
   "saswata-biswas":
     "Transforming complex requirements into elegant, production-ready solutions.",
   "rahul-raj":
-    "Liquidity Infrastructure Associates @ JP Morgan — Architecting robust financial systems with precision at enterprise scale.",
-  "bikram-chandra":
-    "Software Engineer @ Persistent Company — Developing scalable solutions that drive business growth.",
+    "Architecting robust financial systems with precision at enterprise scale.",
+  "bikram-chandra": "Developing scalable solutions that drive business growth.",
   "shyamal-gandhi":
     "Ensuring seamless user experiences through reliable support systems.",
   "naincy-raj":
     "Bridging frontend elegance with rock-solid backend architecture.",
   "pritam-debnath":
     "Amplifying brand presence and engaging audiences across digital channels.",
-  "subhi-nigam":
+  "shubhi-nigam":
     "Turning raw data into actionable insights through intuitive interfaces.",
   "sanjeet-kumar":
     "Resolving technical challenges swiftly to keep operations running.",

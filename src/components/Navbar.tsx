@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AnimatedUnderline } from "./ui/AnimatedUnderline";
 
 const navLinks = [
-  { label: "Services", href: "#services", active: false },
+  { label: "Services", href: "#perfect-fit", active: false },
   { label: "Pricing", href: "#pricing", active: false },
   { label: "FAQ", href: "#faq", active: false },
 ];

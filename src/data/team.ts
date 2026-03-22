@@ -27,7 +27,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "rahul-raj",
     name: "Rahul Raj",
-    role: "Software Developer",
+    role: "Liquidity Infrastructure Associates @ JP Morgan",
     experience: "7+ years",
     bio: "Liquidity Infra project Associates at J.P. Morgan, Warsaw, Poland, Europe",
     image: "/images/team/rahul_raj.jpeg",
@@ -35,7 +35,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "bikram-chandra",
     name: "Bikram Chandra",
-    role: "Software Developer",
+    role: "Software Engineer @ Persistent Company ",
     experience: "7+ years",
     bio: "Persistent Company",
     image: "/images/team/bikram_chandra.jpeg",
@@ -61,10 +61,10 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/naincy_raj.jpeg",
   },
   {
-    id: "subhi-nigam",
-    name: "Subhi Nigam",
+    id: "shubhi-nigam",
+    name: "Shubhi Nigam",
     role: "Data Analysis, Frontend Developer",
-    image: "/images/team/subhi_nigam.jpeg",
+    image: "/images/team/shubhi_nigam.jpeg",
   },
   {
     id: "sanjeet-kumar",

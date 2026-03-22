@@ -28,7 +28,7 @@ const fadeUpVariant = {
 
 const AudienceFit = () => {
   return (
-    <section className="relative py-24 px-6 bg-background overflow-hidden ">
+    <section id="perfect-fit" className="relative py-24 px-6 bg-background overflow-hidden ">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
