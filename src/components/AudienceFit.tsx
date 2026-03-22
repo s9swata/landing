@@ -44,7 +44,7 @@ const AudienceFit = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_200px_1fr] gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[200px_1fr_200px_1fr] gap-8 lg:gap-12">
           {/* SaaS Category */}
           <motion.div
             initial="hidden"

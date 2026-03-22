@@ -63,7 +63,7 @@ const ProblemSolutionSplit = () => {
   return (
     <section className="relative py-32 px-6 bg-background overflow-hidden">
       {/* Abstract Background Typography */}
-      <div className="absolute top-10 -left-20 text-[15rem] font-bold text-neutral-900/10 pointer-events-none select-none tracking-tighter mix-blend-overlay">
+      <div className="absolute top-10 -left-10 sm:-left-20 text-[8rem] sm:text-[12rem] md:text-[15rem] font-bold text-neutral-900/10 pointer-events-none select-none tracking-tighter mix-blend-overlay">
         friction.
       </div>
 

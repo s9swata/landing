@@ -70,7 +70,7 @@ const Benefits = () => {
           <motion.div variants={fadeUpVariant} className="mb-4">
             <PillBadge icon="✨">Why Us</PillBadge>
           </motion.div>
-          <motion.h2 variants={fadeUpVariant} className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
+          <motion.h2 variants={fadeUpVariant} className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-foreground max-w-2xl mb-6">
             Built to Grow Your Brand
           </motion.h2>
           <motion.p variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl">

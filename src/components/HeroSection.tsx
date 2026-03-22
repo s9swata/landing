@@ -35,7 +35,7 @@ const HeroSection = () => (
 
         {/* Heading */}
         <BlurIn delay={0.1} duration={0.6}>
-          <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading text-white leading-[0.8] tracking-[-4px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-heading text-white leading-[0.8] tracking-[-2px] sm:tracking-[-3px] md:tracking-[-4px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
             <span>Stop waiting.</span>
             <span className="flex items-center gap-3">
               Start
