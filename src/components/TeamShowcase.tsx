@@ -9,20 +9,34 @@ import { teamMembers } from "@/data/team";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
 };
 
 const memberQuotes: Record<string, string> = {
-  "amritesh-anshu": "Building the architectural foundation that powers our most ambitious projects.",
-  "saswata-biswas": "Transforming complex requirements into elegant, production-ready solutions.",
-  "rahul-raj": "Liquidity Infrastructure Associates @ JP Morgan — Architecting robust financial systems with precision at enterprise scale.",
-  "bikram-chandra": "Software Engineer @ Persistent Company — Developing scalable solutions that drive business growth.",
-  "shyamal-gandhi": "Ensuring seamless user experiences through reliable support systems.",
-  "naincy-raj": "Bridging frontend elegance with rock-solid backend architecture.",
-  "pritam-debnath": "Amplifying brand presence and engaging audiences across digital channels.",
-  "subhi-nigam": "Turning raw data into actionable insights through intuitive interfaces.",
-  "sanjeet-kumar": "Resolving technical challenges swiftly to keep operations running.",
-  "riya-gupta": "Designing efficient databases and crafting seamless user experiences."
+  "amritesh-kumar":
+    "Building the architectural foundation that powers our most ambitious projects.",
+  "saswata-biswas":
+    "Transforming complex requirements into elegant, production-ready solutions.",
+  "rahul-raj":
+    "Liquidity Infrastructure Associates @ JP Morgan — Architecting robust financial systems with precision at enterprise scale.",
+  "bikram-chandra":
+    "Software Engineer @ Persistent Company — Developing scalable solutions that drive business growth.",
+  "shyamal-gandhi":
+    "Ensuring seamless user experiences through reliable support systems.",
+  "naincy-raj":
+    "Bridging frontend elegance with rock-solid backend architecture.",
+  "pritam-debnath":
+    "Amplifying brand presence and engaging audiences across digital channels.",
+  "subhi-nigam":
+    "Turning raw data into actionable insights through intuitive interfaces.",
+  "sanjeet-kumar":
+    "Resolving technical challenges swiftly to keep operations running.",
+  "riya-gupta":
+    "Designing efficient databases and crafting seamless user experiences.",
 };
 
 const TeamShowcase = () => {
@@ -45,7 +59,10 @@ const TeamShowcase = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2 } } }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
           className="flex flex-col items-center text-center mb-12"
         >
           <motion.div variants={fadeUpVariant} className="mb-4">
@@ -62,7 +79,7 @@ const TeamShowcase = () => {
         <div className="relative group">
           {/* Left Fade Gradient */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          
+
           {/* Right Fade Gradient */}
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
@@ -77,12 +94,15 @@ const TeamShowcase = () => {
           >
             {teamMembers.map((member) => (
               <div key={member.id} className="snap-start shrink-0">
-                <AuthorCard 
+                <AuthorCard
                   name={member.name}
                   role={member.role}
                   avatarSrc={member.image}
                   experience={member.experience}
-                  quote={memberQuotes[member.id] || "Dedicated to delivering excellence in every project."}
+                  quote={
+                    memberQuotes[member.id] ||
+                    "Dedicated to delivering excellence in every project."
+                  }
                   className="h-full"
                 />
               </div>

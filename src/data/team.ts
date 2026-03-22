@@ -9,8 +9,8 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   {
-    id: "amritesh-anshu",
-    name: "Amritesh Anshu",
+    id: "amritesh-kumar",
+    name: "Amritesh Kumar",
     role: "Founding Developer",
     experience: "",
     bio: "",
