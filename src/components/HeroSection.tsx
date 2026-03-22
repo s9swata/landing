@@ -22,7 +22,7 @@ const HeroSection = () => (
 
     {/* Content */}
     <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center justify-center h-full pt-[150px]">
-      <div className="flex flex-col gap-8 max-w-4xl items-center">
+      <div className="flex flex-col gap-5 max-w-4xl items-center">
         {/* Badge */}
         <BlurIn delay={0} duration={0.6}>
           <div className="liquid-glass inline-flex items-center gap-2 rounded-full px-4 py-1.5">
@@ -35,15 +35,14 @@ const HeroSection = () => (
 
         {/* Heading */}
         <BlurIn delay={0.1} duration={0.6}>
-          <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] font-serif italic text-white leading-[0.8] tracking-[-4px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
+          <h1 className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading text-white leading-[0.8] tracking-[-4px] flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
             <span>Stop waiting.</span>
             <span className="flex items-center gap-3">
               Start
               <RotatingText
                 texts={['Shipping', 'Building', 'Launching', 'Scaling']}
-                mainClassName="bg-white/10 px-4 sm:px-5 py-2 sm:py-3 rounded-2xl overflow-hidden justify-center text-white"
-                staggerDuration={0.03}
-                staggerFrom="last"
+                mainClassName="px-4 sm:px-5 py-2 sm:py-3 rounded-2xl overflow-hidden justify-center text-white"
+                staggerDuration={0}
                 rotationInterval={3000}
               />
             </span>
@@ -60,11 +59,13 @@ const HeroSection = () => (
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 items-center mt-16">
+      <div className="flex flex-wrap justify-center gap-4 items-center mt-10">
         <BlurIn delay={1.0} duration={0.6}>
           <Magnet padding={20} disabled={false} magnetStrength={5}>
             <a
-              href="/book-call"
+              href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+              target="_blank"
+              rel="noreferrer"
               className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#070612] rounded-md px-5 py-3 text-sm font-medium transition-transform hover:scale-105"
             >
               Book a Free Call
@@ -76,7 +77,7 @@ const HeroSection = () => (
     </div>
 
     {/* Logo Marquee */}
-    <div className="absolute bottom-16 left-0 right-0 z-20 flex flex-wrap justify-center gap-8 md:gap-12 px-6">
+    <div className="absolute bottom-5 left-0 right-0 z-20 flex flex-wrap justify-center gap-8 md:gap-12 px-6">
       {logoNames.map((name, i) => (
         <BlurIn key={name} delay={0.8 + (i * 0.1)} duration={0.6}>
           <span className="text-white/40 text-sm font-medium tracking-wide select-none">

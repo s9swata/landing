@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { AnimatedUnderline } from "./ui/AnimatedUnderline";
 
@@ -28,12 +27,14 @@ const Navbar = () => (
           </a>
         ))}
       </div>
-      <Link
-        href="/book-call"
+      <a
+        href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+        target="_blank"
+        rel="noreferrer"
         className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-background bg-foreground rounded-md hover:bg-foreground/90 transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.4)]"
       >
         <AnimatedUnderline>Book a Free Call</AnimatedUnderline>
-      </Link>
+      </a>
     </div>
   </nav>
 );

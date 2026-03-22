@@ -74,14 +74,10 @@
     );
 
     --radius: 0.5rem;
-  }
-  .theme {
+
     --font-heading:        var(--font-schibsted-grotesk);
     --font-body:        var(--font-karla);
     --font-mono:        var(--font-fira-code);
-    --font-schibsted-grotesk:        var(--font-schibsted-grotesk);
-    --font-karla:        var(--font-karla);
-    --font-fira-code:        var(--font-fira-code);
   }
   h1 {
     font-family:        var(--font-heading);

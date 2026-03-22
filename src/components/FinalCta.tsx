@@ -63,7 +63,7 @@ const FinalCta = () => {
               href="https://cal.com/saswata-biswas-dfnuvi/client-call"
               target="_blank"
               rel="noreferrer"
-              className="px-10 py-5 rounded-2xl text-lg font-semibold bg-white text-black hover:bg-neutral-200 hover:scale-105 active:scale-95 transition-all block w-full sm:w-auto text-center shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+              className="px-8 py-2 rounded-xl text-base font-semibold bg-white text-black hover:bg-neutral-200 hover:scale-105 active:scale-95 transition-all block w-full sm:w-auto text-center shadow-[0_0_40px_rgba(255,255,255,0.1)]"
             >
               Book Your Free Demo
             </a>

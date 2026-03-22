@@ -47,6 +47,8 @@ const solutions = [
   },
 ];
 
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
@@ -162,19 +164,25 @@ const ProblemSolutionSplit = () => {
         className="max-w-5xl mx-auto mt-24 relative z-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div variants={fadeUpVariant} className="h-full p-8 lg:p-12 rounded-[2.5rem] bg-surface/40 backdrop-blur-xl border border-neutral-700 hover:border-primary/30 transition-colors group relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <h3 className="text-primary font-bold text-sm lg:text-base tracking-widest uppercase mb-4 relative z-10">For Founders</h3>
-            <p className="text-neutral-300 text-lg lg:text-xl leading-relaxed relative z-10">
-              Custom SaaS apps, AI tools, and great landing pages. Built with Next.js. Ship faster and grow easy.
-            </p>
+          <motion.div variants={fadeUpVariant} className="relative h-full rounded-[2.5rem] border border-neutral-700 hover:border-primary/30 transition-colors group p-[3px]">
+            <GlowingEffect isAlwaysActive={true} borderWidth={3} spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} />
+             <div className="relative h-full w-full bg-surface/40 backdrop-blur-xl p-8 lg:p-12 rounded-[inherit] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <h3 className="text-primary font-bold text-sm lg:text-base tracking-widest uppercase mb-4 relative z-10">For Founders</h3>
+                <p className="text-neutral-300 text-lg lg:text-xl leading-relaxed relative z-10">
+                  Custom SaaS apps, AI tools, and great landing pages. Built with Next.js. Ship faster and grow easy.
+                </p>
+             </div>
           </motion.div>
-          <motion.div variants={fadeUpVariant} className="h-full p-8 lg:p-12 rounded-[2.5rem] bg-surface/40 backdrop-blur-xl border border-neutral-700 hover:border-primary/30 transition-colors group relative overflow-hidden md:mt-12">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <h3 className="text-primary font-bold text-sm lg:text-base tracking-widest uppercase mb-4 relative z-10">For Retail</h3>
-            <p className="text-neutral-300 text-lg lg:text-xl leading-relaxed relative z-10">
-              Online stores built for you. Fast mobile checkout and seamless payment workflows integrated instantly.
-            </p>
+          <motion.div variants={fadeUpVariant} className="relative h-full rounded-[2.5rem] border border-neutral-700 hover:border-primary/30 transition-colors group p-[3px]">
+            <GlowingEffect isAlwaysActive={true} borderWidth={3} spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} />
+             <div className="relative h-full w-full bg-surface/40 backdrop-blur-xl p-8 lg:p-12 rounded-[inherit] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <h3 className="text-primary font-bold text-sm lg:text-base tracking-widest uppercase mb-4 relative z-10">For Retail</h3>
+                <p className="text-neutral-300 text-lg lg:text-xl leading-relaxed relative z-10">
+                  Online stores built for you. Fast mobile checkout and seamless payment workflows integrated instantly.
+                </p>
+             </div>
           </motion.div>
         </div>
       </motion.div>

@@ -38,11 +38,15 @@ export const AuthorCard = ({
           />
         </div>
         <div className="flex flex-col justify-center">
-          <span className="text-white font-medium text-[19px] tracking-tight">{name}</span>
-          <span className="text-[#8B8B93] text-[15px] tracking-wide mt-0.5">{role}</span>
+          <span className="text-white font-medium text-[19px] tracking-tight">
+            {name}
+          </span>
+          <span className="text-[#8B8B93] text-[15px] tracking-wide mt-0.5">
+            {role}
+          </span>
           {experience && (
             <div className="mt-2 text-left">
-              <Badge variant="default" className="text-[#8B8B93] border-white/10 font-normal px-2.5 py-0.5">
+              <Badge variant="outline" className="">
                 {experience}
               </Badge>
             </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SendIcon } from "@/components/animate-ui/icons/send";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
@@ -13,6 +12,7 @@ const fadeUpVariant = {
 };
 
 const Contact = () => {
+
   return (
     <section className="relative py-32 px-6 bg-background overflow-hidden border-t border-white/5">
 
@@ -62,7 +62,9 @@ const Contact = () => {
           viewport={{ once: true, margin: "-50px" }}
           variants={fadeUpVariant}
         >
-          <form className="bg-surface/30 backdrop-blur-xl border border-neutral-800/60 p-8 md:p-12 rounded-[2rem] shadow-2xl space-y-8 relative overflow-hidden group">
+          <form action="https://formsubmit.co/hello@nuturnstudio.com" method="POST" className="bg-surface/30 backdrop-blur-xl border border-neutral-800/60 p-8 md:p-12 rounded-[2rem] shadow-2xl space-y-8 relative overflow-hidden group">
+            <input type="hidden" name="_subject" value="New Project Inquiry" />
+            <input type="hidden" name="_captcha" value="false" />
 
             {/* Form Inner Glow */}
             <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-primary/5 to-transparent pointer-events-none" />
@@ -70,31 +72,31 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
               <div className="space-y-3">
                 <label className="text-sm font-medium text-neutral-300">Name</label>
-                <Input type="text" placeholder="John Doe" className="h-12 bg-neutral-900/50 border-neutral-800 text-white placeholder:text-neutral-600 focus-visible:ring-primary/50 rounded-xl" />
+                <Input type="text" name="name" required placeholder="John Doe" className="h-12 bg-neutral-900/50 border-neutral-800 text-white placeholder:text-neutral-600 focus-visible:ring-primary/50 rounded-xl" />
               </div>
               <div className="space-y-3">
                 <label className="text-sm font-medium text-neutral-300">Email</label>
-                <Input type="email" placeholder="john@example.com" className="h-12 bg-neutral-900/50 border-neutral-800 text-white placeholder:text-neutral-600 focus-visible:ring-primary/50 rounded-xl" />
+                <Input type="email" name="email" required placeholder="john@example.com" className="h-12 bg-neutral-900/50 border-neutral-800 text-white placeholder:text-neutral-600 focus-visible:ring-primary/50 rounded-xl" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
               <div className="space-y-3 flex flex-col">
                 <label className="text-sm font-medium text-neutral-300">Project Type</label>
-                <select className="h-12 w-full rounded-xl border border-neutral-800 bg-neutral-900/50 px-4 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 appearance-none">
+                <select name="projectType" required className="h-12 w-full rounded-xl border border-neutral-800 bg-neutral-900/50 px-4 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 appearance-none">
                   <option value="" className="bg-neutral-900">Select a type...</option>
-                  <option value="saas" className="bg-neutral-900">SaaS Development</option>
-                  <option value="ecommerce" className="bg-neutral-900">Ecommerce Store</option>
-                  <option value="other" className="bg-neutral-900">Other</option>
+                  <option value="SaaS Development" className="bg-neutral-900">SaaS Development</option>
+                  <option value="Ecommerce Store" className="bg-neutral-900">Ecommerce Store</option>
+                  <option value="Other" className="bg-neutral-900">Other</option>
                 </select>
               </div>
               <div className="space-y-3 flex flex-col">
                 <label className="text-sm font-medium text-neutral-300">Budget Range</label>
-                <select className="h-12 w-full rounded-xl border border-neutral-800 bg-neutral-900/50 px-4 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 appearance-none">
+                <select name="budget" required className="h-12 w-full rounded-xl border border-neutral-800 bg-neutral-900/50 px-4 text-sm text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 appearance-none">
                   <option value="" className="bg-neutral-900">Select a range...</option>
-                  <option value="<5k" className="bg-neutral-900">&lt;$5k</option>
-                  <option value="5k-10k" className="bg-neutral-900">$5k - $10k</option>
-                  <option value=">10k" className="bg-neutral-900">$10k+</option>
+                  <option value="<$5k" className="bg-neutral-900">&lt;$5k</option>
+                  <option value="$5k - $10k" className="bg-neutral-900">$5k - $10k</option>
+                  <option value="$10k+" className="bg-neutral-900">$10k+</option>
                 </select>
               </div>
             </div>
@@ -102,20 +104,22 @@ const Contact = () => {
             <div className="space-y-3 relative z-10">
               <label className="text-sm font-medium text-neutral-300">Message</label>
               <textarea
+                name="message"
+                required
                 placeholder="Tell us about your goals..."
                 className="flex min-h-[140px] w-full rounded-xl border border-neutral-800 bg-neutral-900/50 px-4 py-4 text-sm text-white placeholder:text-neutral-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 resize-none"
               />
             </div>
 
-            <Button className="w-full bg-white text-black hover:bg-neutral-200 hover:scale-[1.02] active:scale-[0.98] transition-all font-semibold h-14 rounded-xl group relative z-10 text-base">
+            <button type="submit" className="w-full bg-white text-black hover:bg-neutral-200 hover:scale-[1.02] active:scale-[0.98] transition-all font-semibold h-10 rounded-xl group relative z-10 text-base flex items-center justify-center">
               Send Message
               <AnimateIcon animateOnHover className="ml-3 group-hover:translate-x-1 transition-transform">
                 <SendIcon className="w-4 h-4" />
               </AnimateIcon>
-            </Button>
+            </button>
 
             <p className="text-center text-sm text-neutral-500 pt-2 relative z-10">
-              Prefer to chat directly? <a href="https://cal.com/saswata-biswas-dfnuvi/client-call" target="_blank" rel="noreferrer" className="text-primary hover:text-white underline-offset-4 font-medium transition-colors">Book a call on Cal.com</a>
+              Prefer to chat directly? <a href="https://cal.com/saswata-biswas-dfnuvi/client-call" target="_blank" rel="noreferrer" className="text-primary hover:text-white underline-offset-4 font-medium transition-colors hover:underline">Book a call on Cal.com</a>
             </p>
           </form>
         </motion.div>

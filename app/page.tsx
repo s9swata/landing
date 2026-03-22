@@ -4,7 +4,6 @@ import ProblemSolutionSplit from "@/components/ProblemSolutionSplit";
 import AudienceFit from "@/components/AudienceFit";
 import Benefits from "@/components/Benefits";
 import Pricing from "@/components/Pricing";
-import HowItWorks from "@/components/HowItWorks";
 import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
 import Contact from "@/components/Contact";
@@ -22,7 +21,6 @@ export default function Home() {
       <AudienceFit />
       <Benefits />
       <Pricing />
-      <HowItWorks />
       <Faq />
       <FinalCta />
       <Contact />

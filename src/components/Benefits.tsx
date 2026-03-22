@@ -1,12 +1,17 @@
 "use client";
 
+import Image from "next/image";
+
 import { motion } from "motion/react";
 import { PillBadge } from "./ui/PillBadge";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { Timer } from "@/components/animate-ui/icons/timer";
 import { CopyIcon } from "@/components/animate-ui/icons/copy";
 import { BlendIcon } from "@/components/animate-ui/icons/blend";
 import { SlidersHorizontal } from "@/components/animate-ui/icons/sliders-horizontal";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+
+import { FollowerPointerCard } from "@/components/ui/following-pointer";
 
 const benefits = [
   {
@@ -16,6 +21,7 @@ const benefits = [
     Icon: Timer,
     className: "md:col-span-2 md:row-span-2 lg:p-12",
     titleClass: "text-2xl md:text-3xl",
+    bgImage: "/images/space.jpg",
   },
   {
     number: "02",
@@ -24,6 +30,7 @@ const benefits = [
     Icon: CopyIcon,
     className: "md:col-span-1 md:row-span-1",
     titleClass: "text-xl",
+    bgImage: "/images/leads.jpg",
   },
   {
     number: "03",
@@ -32,6 +39,7 @@ const benefits = [
     Icon: BlendIcon,
     className: "md:col-span-1 md:row-span-1",
     titleClass: "text-xl",
+    bgImage: "/images/sell.webp",
   },
   {
     number: "04",
@@ -40,6 +48,7 @@ const benefits = [
     Icon: SlidersHorizontal,
     className: "md:col-span-3 md:row-span-1 flex-col md:flex-row items-start md:items-center justify-between",
     titleClass: "text-xl md:text-2xl",
+    bgImage: "/images/run.jpg",
   },
 ];
 
@@ -78,31 +87,45 @@ const Benefits = () => {
         >
           {benefits.map((benefit, index) => (
             <motion.div key={index} variants={fadeUpVariant} className={`h-full ${benefit.className}`}>
-              <AnimateIcon animateOnHover className="h-full">
-                <div className={`h-full flex flex-col p-6 lg:p-8 rounded-[2rem] bg-surface/30 backdrop-blur-md border border-neutral-800 hover:bg-neutral-800/40 transition-colors relative overflow-hidden group ${index === 3 ? "md:flex-row gap-6 md:items-center" : ""}`}>
-                  
-                  {/* Subtle inner glow on hover */}
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[inherit] pointer-events-none" />
+              <FollowerPointerCard title="Hover me" className="h-full">
+                <AnimateIcon animateOnHover className="h-full">
+                  <CardContainer containerClassName="h-full w-full py-0" className="h-full w-full">
+                    <CardBody className={`h-full w-full flex flex-col p-6 lg:p-8 rounded-[2rem] bg-surface/30 backdrop-blur-md border border-neutral-800 hover:bg-neutral-800/40 transition-colors relative overflow-hidden group ${index === 3 ? "md:flex-row gap-6 md:items-center" : ""}`}>
+                      
+                      {benefit.bgImage && (
+                        <CardItem translateZ={30} className="absolute inset-0 w-full h-full z-0 pointer-events-none rounded-[2rem] overflow-hidden">
+                          <Image
+                            src={benefit.bgImage}
+                            alt={benefit.title}
+                            fill
+                            className="object-cover opacity-40 mix-blend-overlay"
+                          />
+                        </CardItem>
+                      )}
 
-                  <div className="absolute top-6 right-8 text-6xl font-black text-white/5 transition-colors pointer-events-none select-none">
-                    {benefit.number}
-                  </div>
-                  
-                  <div className={`w-14 h-14 rounded-xl bg-neutral-800 flex items-center justify-center shrink-0 border border-neutral-700/50 ${index === 3 ? "md:mb-0 mb-6" : "mb-6"}`}>
-                    <benefit.Icon className="w-6 h-6 text-foreground" />
-                  </div>
-                  
-                  <div className={`flex flex-col ${index === 3 ? "md:w-3/4" : "flex-1 justify-end"}`}>
-                    <h3 className={`font-medium text-foreground mb-3 ${benefit.titleClass}`}>
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed md:text-lg">
-                      {benefit.description}
-                    </p>
-                  </div>
+                      <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[inherit] pointer-events-none" />
 
-                </div>
-              </AnimateIcon>
+                      <CardItem translateZ={50} className="absolute top-6 right-8 text-6xl font-black text-white/5 transition-colors pointer-events-none select-none z-10">
+                        {benefit.number}
+                      </CardItem>
+                      
+                      <CardItem translateZ={80} className={`relative z-10 w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center shrink-0 border border-neutral-700/50 ${index === 3 ? "md:mb-0 mb-6" : "mb-6"}`}>
+                        <benefit.Icon className="w-5 h-5 text-foreground" />
+                      </CardItem>
+                      
+                      <CardItem translateZ={100} className={`relative z-10 flex flex-col ${index === 3 ? "md:w-3/4" : "flex-1 justify-end"}`}>
+                        <h3 className={`font-medium text-foreground mb-3 ${benefit.titleClass}`}>
+                          {benefit.title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed md:text-lg">
+                          {benefit.description}
+                        </p>
+                      </CardItem>
+
+                    </CardBody>
+                  </CardContainer>
+                </AnimateIcon>
+              </FollowerPointerCard>
             </motion.div>
           ))}
         </motion.div>

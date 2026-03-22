@@ -49,6 +49,12 @@ export const teamMembers: TeamMember[] = [
     image: "/images/team/shyamal_gandhi.jpeg",
   },
   {
+    id: "pritam-debnath",
+    name: "Pritam Debnath",
+    role: "Social Media Manager",
+    image: "/images/team/pritam_debnath.png",
+  },
+  {
     id: "naincy-raj",
     name: "Naincy Raj",
     role: "Full Stack Developer",
