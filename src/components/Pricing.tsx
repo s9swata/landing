@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { CheckIcon } from "@/components/animate-ui/icons/check";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 

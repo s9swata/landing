@@ -5,9 +5,9 @@ import AudienceFit from "@/components/AudienceFit";
 import Benefits from "@/components/Benefits";
 import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
+import TeamShowcase from "@/components/TeamShowcase";
 import FinalCta from "@/components/FinalCta";
 import Contact from "@/components/Contact";
-import TeamShowcase from "@/components/TeamShowcase";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -22,9 +22,9 @@ export default function Home() {
       <Benefits />
       <Pricing />
       <Faq />
+      <TeamShowcase />
       <FinalCta />
       <Contact />
-      <TeamShowcase />
       <Footer />
     </main>
   );

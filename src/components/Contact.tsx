@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { SendIcon } from "@/components/animate-ui/icons/send";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";

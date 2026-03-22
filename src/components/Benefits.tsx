@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { PillBadge } from "./ui/PillBadge";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { Timer } from "@/components/animate-ui/icons/timer";

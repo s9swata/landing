@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { SearchIcon } from "@/components/animate-ui/icons/search";
 import { RouteIcon } from "@/components/animate-ui/icons/route";
 import { BinaryIcon } from "@/components/animate-ui/icons/binary";

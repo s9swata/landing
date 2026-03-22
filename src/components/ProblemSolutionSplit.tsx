@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { PillBadge } from "./ui/PillBadge";
 import { FlipText } from "./ui/flip-text";
 import { ClockIcon } from "@/components/animate-ui/icons/clock";

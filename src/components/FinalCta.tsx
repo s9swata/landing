@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { CircleCheckIcon } from "@/components/animate-ui/icons/circle-check";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
