@@ -7,14 +7,19 @@ import RotatingText from "./ui/RotatingText";
 import { AnimatedUnderline } from "./ui/AnimatedUnderline";
 import Magnet from "./ui/Magnet";
 
-const badges = [
-  { icon: "🚀", text: "SaaS Apps & Online Shops" }
+const badges = [{ icon: "🚀", text: "SaaS Apps & Online Shops" }];
+
+const logoNames = [
+  "eCommerce",
+  "SaaS",
+  "Local Brands",
+  "Automation",
+  "App Dev",
+  "FullStack",
 ];
 
-const logoNames = ["Vercel", "Stripe", "Linear", "Notion", "Raycast", "Arc"];
-
 const HeroSection = () => (
-  <section className="relative h-screen w-full bg-[#070612] overflow-hidden flex items-center">
+  <section className="relative h-screen w-full bg-[#000000] overflow-hidden flex items-center">
     {/* Video */}
     <div className="absolute inset-0 z-0">
       <VideoPlayer />
@@ -29,7 +34,9 @@ const HeroSection = () => (
             <span className=" text-black rounded-full px-2 py-0.5 text-xs font-bold leading-none flex items-center justify-center">
               {badges[0].icon}
             </span>
-            <span className="text-sm font-medium text-white/90">{badges[0].text}</span>
+            <span className="text-sm font-medium text-white/90">
+              {badges[0].text}
+            </span>
           </div>
         </BlurIn>
 
@@ -40,7 +47,7 @@ const HeroSection = () => (
             <span className="flex items-center gap-3">
               Start
               <RotatingText
-                texts={['Shipping', 'Building', 'Launching', 'Scaling']}
+                texts={["Shipping", "Building", "Launching", "Scaling"]}
                 mainClassName="px-4 sm:px-5 py-2 sm:py-3 rounded-2xl overflow-hidden justify-center text-white"
                 staggerDuration={0}
                 rotationInterval={3000}
@@ -53,7 +60,8 @@ const HeroSection = () => (
         {/* Subtitle */}
         <BlurIn delay={0.8} duration={0.6}>
           <p className="text-white/80 text-lg font-normal leading-relaxed max-w-xl mx-auto">
-            We make fast, nice websites for founders and local shops. We build SaaS apps and online stores.
+            We make fast, nice websites for founders and local shops. We build
+            SaaS apps and online stores.
           </p>
         </BlurIn>
       </div>
@@ -79,7 +87,7 @@ const HeroSection = () => (
     {/* Logo Marquee */}
     <div className="absolute bottom-5 left-0 right-0 z-20 flex flex-wrap justify-center gap-8 md:gap-12 px-6">
       {logoNames.map((name, i) => (
-        <BlurIn key={name} delay={0.8 + (i * 0.1)} duration={0.6}>
+        <BlurIn key={name} delay={0.8 + i * 0.1} duration={0.6}>
           <span className="text-white/40 text-sm font-medium tracking-wide select-none">
             {name}
           </span>

@@ -15,7 +15,7 @@ const VideoPlayer = memo(() => {
       >
         <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4" type="video/mp4" />
       </video>
-      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#070612] to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-80 lg:h-96 bg-gradient-to-t from-[#000000] to-transparent z-10 pointer-events-none" />
     </>
   );
 });
