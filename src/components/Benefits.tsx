@@ -98,6 +98,7 @@ const Benefits = () => {
                             src={benefit.bgImage}
                             alt={benefit.title}
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="object-cover opacity-40 mix-blend-overlay"
                           />
                         </CardItem>
