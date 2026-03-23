@@ -91,7 +91,7 @@ const HeroSection = () => (
                   key={i}
                   src="https://emoji.aranja.com/static/emoji-data/img-apple-160/2b50.png"
                   alt="star"
-                  className="w-4 h-4 md:w-5 md:h-5 object-contain"
+                  className="w-2 h-2 md:w-5 md:h-5 object-contain"
                 />
               ))}
             </div>
