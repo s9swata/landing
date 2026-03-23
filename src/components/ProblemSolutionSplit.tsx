@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { PillBadge } from "./ui/PillBadge";
-import { FlipText } from "./ui/flip-text";
 import { ClockIcon } from "@/components/animate-ui/icons/clock";
 import { ChartBarDecreasingIcon } from "@/components/animate-ui/icons/chart-bar-decreasing";
 import { MessageCircleIcon } from "@/components/animate-ui/icons/message-circle";
@@ -91,7 +90,7 @@ const ProblemSolutionSplit = () => {
           <motion.p
             variants={fadeUpVariant} className="text-lg text-muted-foreground max-w-xl mb-12"
           >
-            There is a better way. <FlipText className="text-foreground font-medium inline-block">Nuturn Studio</FlipText> handles the hard execution so you can get back to growing.
+            There is a better way. <span className="text-foreground font-medium">Nuturn Studio</span> handles the hard execution so you can get back to growing.
           </motion.p>
 
           <div className="flex flex-col gap-6 w-full">

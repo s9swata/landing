@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { PillBadge } from "./ui/PillBadge";
-import { FlipText } from "./ui/flip-text";
 
 const painPoints = [
   {
@@ -52,7 +51,7 @@ const ProblemAgitation = () => {
           </motion.h2>
           <motion.p variants={rowVariant} className="text-lg text-muted-foreground max-w-xl">
             There is a better way.{" "}
-            <FlipText className="text-foreground font-medium">Nuturn Studio</FlipText> does the
+            <span className="text-foreground font-medium">Nuturn Studio</span> does the
             hard work so you can grow.
           </motion.p>
         </motion.div>
