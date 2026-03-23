@@ -14,7 +14,7 @@ const fadeUpVariant = {
 const Contact = () => {
 
   return (
-    <section className="relative py-32 px-6 bg-background/70 overflow-hidden border-t border-white/5">
+    <section className="relative py-32 px-6 bg-background overflow-hidden border-t border-white/5">
 
       {/* Decorative Glow */}
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full pointer-events-none -z-10" />

@@ -44,7 +44,7 @@ const TeamShowcase = () => {
   const trackRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative py-16 md:py-20 bg-background/70 overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial="hidden"

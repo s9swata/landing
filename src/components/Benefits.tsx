@@ -59,7 +59,7 @@ const fadeUpVariant = {
 
 const Benefits = () => {
   return (
-    <section className="relative py-16 md:py-20 px-6 bg-background/70 overflow-hidden ">
+    <section className="relative py-16 md:py-20 px-6 bg-background overflow-hidden ">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
