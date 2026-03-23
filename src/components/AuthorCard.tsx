@@ -22,9 +22,9 @@ export const AuthorCard = ({
 }: AuthorCardProps) => {
   return (
     <div
-      className={`flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-[24px] sm:rounded-[28px] bg-[#111113] border border-white/[0.05] shadow-2xl w-full sm:w-[340px] md:w-[380px] lg:w-[420px] shrink-0 ${className}`}
+      className={`flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-[24px] sm:rounded-[28px] bg-[#111113] border border-white/[0.05] shadow-2xl w-[88vw] sm:w-[340px] md:w-[380px] lg:w-[420px] h-[260px] sm:h-[300px] md:h-[320px] shrink-0 ${className}`}
     >
-      <p className="text-[#9898A0] text-base sm:text-[18px] leading-[1.7] mb-8 sm:mb-12 font-light tracking-wide flex-1">
+      <p className="text-[#9898A0] text-base sm:text-[18px] leading-[1.7] mb-6 sm:mb-8 font-light tracking-wide flex-1 line-clamp-4 overflow-hidden">
         {quote}
       </p>
 

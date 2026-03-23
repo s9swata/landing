@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { PillBadge } from "./ui/PillBadge";
 import { AuthorCard } from "./AuthorCard";
@@ -38,22 +37,15 @@ const memberQuotes: Record<string, string> = {
     "Designing efficient databases and crafting seamless user experiences.",
 };
 
-const TeamShowcase = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+// Duplicate list for a seamless infinite loop
+const duplicatedMembers = [...teamMembers, ...teamMembers];
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = typeof window !== 'undefined' && window.innerWidth < 640 ? scrollContainerRef.current.clientWidth : 340;
-      scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
+const TeamShowcase = () => {
+  const trackRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative py-24 px-6 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-24 bg-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -74,25 +66,38 @@ const TeamShowcase = () => {
             Meet the Team Behind It All
           </motion.h2>
         </motion.div>
+      </div>
 
-        <div className="relative group">
-          {/* Left Fade Gradient */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+      {/* Infinite Marquee Strip — full bleed, no side padding */}
+      <div className="relative">
+        {/* Left Fade Gradient */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
 
-          {/* Right Fade Gradient */}
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        {/* Right Fade Gradient */}
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-          {/* Scroll Container */}
-          <div
-            ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
-            style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
+        {/* Scrolling Track */}
+        <div
+          className="overflow-hidden"
+          style={{ WebkitMaskImage: "none" }}
+        >
+          <motion.div
+            ref={trackRef}
+            className="flex gap-[6px] w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 60,
+              ease: "linear",
+              repeat: Infinity,
             }}
+            whileHover={{ animationPlayState: "paused" }}
+            style={{ willChange: "transform" }}
           >
-            {teamMembers.map((member) => (
-              <div key={member.id} className="w-full sm:w-auto snap-center sm:snap-start shrink-0 flex justify-center">
+            {duplicatedMembers.map((member, index) => (
+              <div
+                key={`${member.id}-${index}`}
+                className="shrink-0 flex items-center justify-center"
+              >
                 <AuthorCard
                   name={member.name}
                   role={member.role}
@@ -102,30 +107,10 @@ const TeamShowcase = () => {
                     memberQuotes[member.id] ||
                     "Dedicated to delivering excellence in every project."
                   }
-                  className="h-full"
                 />
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Navigation Arrows - Bottom Center */}
-        <div className="flex justify-center items-center gap-4 mt-8">
-          <button
-            onClick={() => scroll("left")}
-            className="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-md border border-neutral-700 flex items-center justify-center text-foreground hover:bg-surface transition-colors"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          <button
-            onClick={() => scroll("right")}
-            className="w-12 h-12 rounded-full bg-surface/80 backdrop-blur-md border border-neutral-700 flex items-center justify-center text-foreground hover:bg-surface transition-colors"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          </motion.div>
         </div>
       </div>
     </section>
