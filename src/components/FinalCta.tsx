@@ -11,7 +11,7 @@ const fadeUpVariant = {
 
 const FinalCta = () => {
   return (
-    <section className="relative py-32 px-6 bg-background overflow-hidden ">
+    <section className="relative py-20 md:py-28 px-6 bg-background overflow-hidden ">
 
       {/* Massive Left Offset Visual */}
       <div className="absolute -left-32 top-10 w-[600px] h-[600px] bg-gradient-to-br from-primary/10 to-transparent blur-3xl rounded-full pointer-events-none" />
@@ -58,7 +58,10 @@ const FinalCta = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={fadeUpVariant} className="flex flex-col items-start">
+          <motion.div variants={fadeUpVariant} className="flex flex-col items-start gap-3">
+            <p className="text-sm text-neutral-400 max-w-sm">
+              We reply in 24 hours. No long sales talk — just a quick chat about your goals.
+            </p>
             <a
               href="https://cal.com/saswata-biswas-dfnuvi/client-call"
               target="_blank"
@@ -67,8 +70,8 @@ const FinalCta = () => {
             >
               Book Your Free Demo
             </a>
-            <p className="mt-6 text-sm text-neutral-500 max-w-sm">
-              We reply in 24 hours. No long sales talk, just a quick chat about your goals.
+            <p className="text-xs text-neutral-500">
+              No credit card needed. Cancel anytime.
             </p>
           </motion.div>
         </motion.div>

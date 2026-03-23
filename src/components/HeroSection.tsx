@@ -67,19 +67,26 @@ const HeroSection = () => (
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 items-center mt-6 lg:mt-8">
-        <BlurIn delay={1.0} duration={0.6}>
-          <Magnet padding={20} disabled={false} magnetStrength={5}>
-            <a
-              href="https://cal.com/saswata-biswas-dfnuvi/client-call"
-              target="_blank"
-              rel="noreferrer"
-              className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#070612] rounded-md px-5 py-3 text-sm font-medium transition-transform hover:scale-105"
-            >
-              Book a Free Call
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Magnet>
+      <div className="flex flex-col items-center gap-3 mt-6 lg:mt-8">
+        <div className="flex flex-wrap justify-center gap-4 items-center">
+          <BlurIn delay={1.0} duration={0.6}>
+            <Magnet padding={20} disabled={false} magnetStrength={5}>
+              <a
+                href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+                target="_blank"
+                rel="noreferrer"
+                className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#070612] rounded-md px-5 py-3 text-sm font-medium transition-transform hover:scale-105"
+              >
+                Book a Free Call
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Magnet>
+          </BlurIn>
+        </div>
+        <BlurIn delay={1.3} duration={0.6}>
+          <p className="text-white/40 text-xs tracking-wide">
+            ★★★★★&nbsp;&nbsp;Trusted by 10+ founders &amp; local brands
+          </p>
         </BlurIn>
       </div>
     </div>

@@ -37,7 +37,7 @@ const fadeUpVariant = {
 
 const ProblemAgitation = () => {
   return (
-    <section className="relative py-24 px-6 bg-background overflow-hidden">
+    <section className="relative py-16 md:py-20 px-6 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -94,6 +94,17 @@ const ProblemAgitation = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Bridge to Benefits */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-center text-muted-foreground mt-12 text-sm tracking-wide"
+        >
+          Here&apos;s exactly how we solve each of these for you&nbsp;→
+        </motion.p>
       </div>
     </section>
   );

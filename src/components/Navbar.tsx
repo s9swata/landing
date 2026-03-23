@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -14,6 +14,13 @@ const navLinks = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setPastHero(window.scrollY > window.innerHeight * 0.8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
@@ -42,7 +49,9 @@ const Navbar = () => {
             href="https://cal.com/saswata-biswas-dfnuvi/client-call"
             target="_blank"
             rel="noreferrer"
-            className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-background bg-foreground rounded-md hover:bg-foreground/90 transition-colors shadow-[0_4px_10px_rgba(0,0,0,0.4)]"
+            className={`hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-background bg-foreground rounded-md hover:bg-foreground/90 transition-all shadow-[0_4px_10px_rgba(0,0,0,0.4)] ${
+              pastHero ? "ring-2 ring-white/30 ring-offset-1 ring-offset-black animate-pulse" : ""
+            }`}
           >
             <AnimatedUnderline>Book a Free Call</AnimatedUnderline>
           </a>

@@ -59,7 +59,7 @@ const fadeUpVariant = {
 
 const Benefits = () => {
   return (
-    <section className="relative py-24 px-6 bg-background overflow-hidden ">
+    <section className="relative py-16 md:py-20 px-6 bg-background overflow-hidden ">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial="hidden"
@@ -129,6 +129,25 @@ const Benefits = () => {
               </FollowerPointerCard>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Early CTA for convinced users */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex flex-col items-center mt-12 gap-2"
+        >
+          <a
+            href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground border border-neutral-700 rounded-full px-6 py-2.5 hover:bg-neutral-800 transition-colors"
+          >
+            Sounds good? Book a free 20-min call →
+          </a>
+          <p className="text-xs text-muted-foreground">No commitment. Just a chat.</p>
         </motion.div>
       </div>
     </section>

@@ -14,7 +14,7 @@ const pricingTiers = [
       "Add AI features",
       "Clean, ready-to-use code",
     ],
-    cta: "Get Started",
+    cta: "Book a Free Call",
     popular: true,
   },
   {
@@ -50,7 +50,7 @@ const fadeUpVariant = {
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="relative py-24 px-6 bg-background overflow-hidden ">
+    <section id="pricing" className="relative py-16 md:py-20 px-6 bg-background overflow-hidden ">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
@@ -130,6 +130,17 @@ const Pricing = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Scarcity signal */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.5 }}
+          className="text-center text-xs text-muted-foreground mt-8"
+        >
+          ⚡ Only 2 client slots available this month — first come, first served.
+        </motion.p>
       </div>
     </section>
   );
