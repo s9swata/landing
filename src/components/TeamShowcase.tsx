@@ -43,7 +43,7 @@ const TeamShowcase = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 340;
+      const scrollAmount = typeof window !== 'undefined' && window.innerWidth < 640 ? scrollContainerRef.current.clientWidth : 340;
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -92,7 +92,7 @@ const TeamShowcase = () => {
             }}
           >
             {teamMembers.map((member) => (
-              <div key={member.id} className="snap-start shrink-0">
+              <div key={member.id} className="w-full sm:w-auto snap-center sm:snap-start shrink-0 flex justify-center">
                 <AuthorCard
                   name={member.name}
                   role={member.role}
