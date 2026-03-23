@@ -43,7 +43,7 @@ const fadeUpVariant = {
 
 const Faq = () => {
   return (
-    <section id="faq" className="relative py-32 px-6 bg-background overflow-hidden ">
+    <section id="faq" className="relative py-32 px-6 bg-background/70 overflow-hidden ">
       
       {/* Abstract Background Element */}
       <div className="absolute left-0 bottom-0 w-[600px] h-[600px] bg-primary/5 blur-[150px] rounded-full pointer-events-none -z-10" />

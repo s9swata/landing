@@ -27,7 +27,11 @@ export default function ScrollFlowingPath() {
   return (
     <svg
       className="fixed top-0 left-0 w-full pointer-events-none"
-      style={{ height: "200vh", zIndex: 0 }}
+      style={{ 
+        height: "400vh", 
+        zIndex: 0,
+        clipPath: "inset(100vh 0 0 0)"
+      }}
       preserveAspectRatio="none"
     >
       <path

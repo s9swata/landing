@@ -11,7 +11,7 @@ const fadeUpVariant = {
 
 const FinalCta = () => {
   return (
-    <section className="relative py-20 md:py-28 px-6 bg-background overflow-hidden ">
+    <section className="relative py-20 md:py-28 px-6 bg-background/70 overflow-hidden ">
 
       {/* Massive Left Offset Visual */}
       <div className="absolute -left-32 top-10 w-[600px] h-[600px] bg-gradient-to-br from-primary/10 to-transparent blur-3xl rounded-full pointer-events-none" />

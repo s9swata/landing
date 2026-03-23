@@ -37,7 +37,7 @@ const fadeUpVariant = {
 
 const ProblemAgitation = () => {
   return (
-    <section className="relative py-16 md:py-20 px-6 bg-background overflow-hidden">
+    <section className="relative py-16 md:py-20 px-6 bg-background/70 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial="hidden"

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-background  py-12 px-6">
+    <footer className="bg-background/70 py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-3">
           <Image src="/images/logo.png" alt="Nuturn" width={40} height={40} className="rounded-lg" />
