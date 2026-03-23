@@ -75,7 +75,7 @@
 
     --radius: 0.5rem;
 
-    --font-heading:        var(--font-schibsted-grotesk);
+    --font-heading:        var(--font-inter);
     --font-body:        var(--font-karla);
     --font-mono:        var(--font-fira-code);
   }

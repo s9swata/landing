@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Karla, Fira_Code } from "next/font/google";
+import { Inter, Karla, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { LenisProvider } from "@/components/providers/lenis-provider";
@@ -10,7 +10,9 @@ const firaCodeFiraCode = Fira_Code({subsets:['cyrillic','cyrillic-ext','greek','
 
 const karlaKarla = Karla({subsets:['latin','latin-ext'],weight:['200','300','400','500','600','700','800'],variable:'--font-karla'});
 
-const schibstedGroteskSchibstedGrotesk = Schibsted_Grotesk({subsets:['latin','latin-ext'],weight:['400','500','600','700','800','900'],variable:'--font-schibsted-grotesk'});
+// const schibstedGroteskSchibstedGrotesk = Schibsted_Grotesk({subsets:['latin','latin-ext'],weight:['400','500','600','700','800','900'],variable:'--font-schibsted-grotesk'});
+
+const interInter = Inter({subsets:['latin','latin-ext'],weight:['300','400','500','600','700','800','900'],variable:'--font-inter'});
 
 export const metadata: Metadata = {
   title: "Nuturn — Where Innovation Meets Execution",
@@ -27,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={cn(schibstedGroteskSchibstedGrotesk.variable, karlaKarla.variable, firaCodeFiraCode.variable)}>
+    <html lang="en" suppressHydrationWarning className={cn(interInter.variable, karlaKarla.variable, firaCodeFiraCode.variable)}>
       <body className="font-body antialiased">
         <Providers>
           <ClickSpark
