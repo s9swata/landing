@@ -84,9 +84,21 @@ const HeroSection = () => (
           </BlurIn>
         </div>
         <BlurIn delay={1.3} duration={0.6}>
-          <p className="text-white/40 text-xs tracking-wide">
-            ★★★★★&nbsp;&nbsp;Trusted by 10+ founders &amp; local brands
-          </p>
+          <div className="flex items-center gap-2 mt-1">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <img
+                  key={i}
+                  src="https://emoji.aranja.com/static/emoji-data/img-apple-160/2b50.png"
+                  alt="star"
+                  className="w-4 h-4 md:w-5 md:h-5 object-contain"
+                />
+              ))}
+            </div>
+            <p className="text-white/60 text-sm md:text-lg font-medium tracking-tight">
+              Trusted by 10+ founders &amp; local brands
+            </p>
+          </div>
         </BlurIn>
       </div>
     </div>
