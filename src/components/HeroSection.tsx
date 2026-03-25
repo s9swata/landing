@@ -48,7 +48,7 @@ const HeroSection = () => (
               Start
               <RotatingText
                 texts={["Shipping", "Building", "Launching", "Scaling"]}
-                mainClassName="px-4 sm:px-5 py-2 sm:py-3 rounded-2xl overflow-hidden justify-center text-white"
+                mainClassName="px-4 sm:px-5 py-2 sm:py-3 rounded-2xl overflow-hidden justify-start text-white"
                 staggerDuration={0}
                 rotationInterval={3000}
               />
