@@ -14,7 +14,7 @@ export function FlipText({ children, className }: FlipTextProps) {
 
   return (
     <span
-      className={cn("inline-block cursor-pointer -ml-1", className)}
+      className={cn("inline-block cursor-pointer -ml-3", className)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
