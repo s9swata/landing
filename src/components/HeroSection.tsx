@@ -26,7 +26,7 @@ const HeroSection = () => (
     </div>
 
     {/* Content */}
-    <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center justify-center h-full pt-20 lg:pt-24">
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center text-center mt-16">
       <div className="flex flex-col gap-5 max-w-4xl items-center">
         {/* Badge */}
         <BlurIn delay={0} duration={0.6}>
