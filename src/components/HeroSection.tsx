@@ -89,7 +89,7 @@ const HeroSection = () => (
               {[...Array(5)].map((_, i) => (
                 <img
                   key={i}
-                  src="https://emoji.aranja.com/static/emoji-data/img-apple-160/2b50.png"
+                  src="/images/star.png"
                   alt="star"
                   className="w-2 h-2 md:w-5 md:h-5 object-contain"
                 />
