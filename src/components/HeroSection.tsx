@@ -72,7 +72,7 @@ const HeroSection = () => (
           <BlurIn delay={1.0} duration={0.6}>
             <Magnet padding={20} disabled={false} magnetStrength={5}>
               <a
-                href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+                href="https://cal.com/nuturn/client-call"
                 target="_blank"
                 rel="noreferrer"
                 className="group relative inline-flex items-center justify-center gap-2 bg-white text-[#070612] rounded-md px-5 py-3 text-sm font-medium transition-transform hover:scale-105"

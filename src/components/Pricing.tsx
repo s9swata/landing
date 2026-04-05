@@ -113,7 +113,7 @@ const Pricing = () => {
                     </ul>
 
                     <a
-                      href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+                      href="https://cal.com/nuturn/client-call"
                       target="_blank"
                       rel="noreferrer" 
                       className={`w-full py-3 mt-6 rounded-xl text-sm font-semibold text-center transition-all ${

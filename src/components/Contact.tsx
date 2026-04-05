@@ -119,7 +119,7 @@ const Contact = () => {
             </button>
 
             <p className="text-center text-sm text-neutral-500 pt-2 relative z-10">
-              Prefer to chat directly? <a href="https://cal.com/saswata-biswas-dfnuvi/client-call" target="_blank" rel="noreferrer" className="text-primary hover:text-white underline-offset-4 font-medium transition-colors hover:underline">Book a call on Cal.com</a>
+              Prefer to chat directly? <a href="https://cal.com/nuturn/client-call" target="_blank" rel="noreferrer" className="text-primary hover:text-white underline-offset-4 font-medium transition-colors hover:underline">Book a call on Cal.com</a>
             </p>
           </form>
         </motion.div>

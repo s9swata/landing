@@ -106,7 +106,7 @@ const Benefits = () => {
           className="flex flex-col items-center mt-12 gap-2"
         >
           <a
-            href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+            href="https://cal.com/nuturn/client-call"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-foreground border border-neutral-700 rounded-full px-6 py-2.5 hover:bg-neutral-800 transition-colors"

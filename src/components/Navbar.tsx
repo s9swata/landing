@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+            href="https://cal.com/nuturn/client-call"
             target="_blank"
             rel="noreferrer"
             className={`hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-background bg-foreground rounded-md hover:bg-foreground/90 transition-all shadow-[0_4px_10px_rgba(0,0,0,0.4)] ${
@@ -105,7 +105,7 @@ const Navbar = () => {
                   </a>
                 ))}
                 <a
-                  href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+                  href="https://cal.com/nuturn/client-call"
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => setIsMenuOpen(false)}

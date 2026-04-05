@@ -63,7 +63,7 @@ const FinalCta = () => {
               We reply in 24 hours. No long sales talk — just a quick chat about your goals.
             </p>
             <a
-              href="https://cal.com/saswata-biswas-dfnuvi/client-call"
+              href="https://cal.com/nuturn/client-call"
               target="_blank"
               rel="noreferrer"
               className="px-8 py-2 rounded-xl text-base font-semibold bg-white text-black hover:bg-neutral-200 hover:scale-105 active:scale-95 transition-all block w-full sm:w-auto text-center shadow-[0_0_40px_rgba(255,255,255,0.1)]"
